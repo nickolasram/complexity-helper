@@ -1,0 +1,42 @@
+{
+    "complexities":
+        [
+            {"symbol": "O^2",
+             "examples": 
+                [
+                    "Quicksort"
+                ]},
+            {"symbol": "O(n log n)",
+             "examples":
+                [
+                    "Mergesort",
+                    "Timsort",
+                    "Heapsort"
+                ]},
+            {"symbol": "On^2",
+            "examples":
+                    [
+                        "Bubble sort",
+                        "Insertion sort",
+                        "Selection sort",
+                        "Tree sort",
+                        "Bucket Sort"
+                    ],
+            "image": "On2.png"}, 
+            {"symbol": "O(n(log(n))^2)",
+             "examples": 
+                [
+                    "Shell sort"
+                ]},
+            {"symbol": "O(nk)",
+            "examples": 
+                [
+                    "Radix sort"
+                ]},
+            {"symbol": "O(n+k)",
+            "examples": 
+                [
+                    "Counting sort"
+                ]}
+        ]
+}
