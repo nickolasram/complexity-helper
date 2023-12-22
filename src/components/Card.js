@@ -19,7 +19,7 @@ let Card = props => {
             <section className='subCard'>
             {algorithms.map((alg,index)=>
                 (
-                    <p className='sort-name'>{alg}</p>
+                    <p className='sort-name'>{alg.name}</p>
                 )
             )}
         </section>

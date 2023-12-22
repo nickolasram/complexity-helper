@@ -1,5 +1,5 @@
 import On2 from '../images/On2.png'
-import On2g from '../images/On2.gif'
+import On2g from '../images/bubble.gif'
 import Stack from './Stack';
 
 let MainContentPanel = () =>{

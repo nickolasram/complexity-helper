@@ -16,13 +16,16 @@
             {"symbol": "On^2",
             "examples":
                     [
+                        {"name": "Bubble sort",
+                         "gif": "bubble.gif"},
                         "Bubble sort",
                         "Insertion sort",
                         "Selection sort",
                         "Tree sort",
                         "Bucket Sort"
                     ],
-            "image": "O n2.png"}, 
+            "image": "On2.png",
+            "Description": "often reflects the fact that the algorithm processes all (or a substantial number of) pairs of elements in a given input set. In the code it usually looks like a for loop embedded inside of another for loop. The examples are basic sorting algorithms like bubble, insertion or selection sort."}, 
             {"symbol": "O(n(log(n))^2)",
              "examples": 
                 [
