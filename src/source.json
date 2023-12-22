@@ -22,7 +22,7 @@
                         "Tree sort",
                         "Bucket Sort"
                     ],
-            "image": "On2.png"}, 
+            "image": "O n2.png"}, 
             {"symbol": "O(n(log(n))^2)",
              "examples": 
                 [
