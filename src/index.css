@@ -95,3 +95,18 @@ body{
   align-items: flex-start;
   gap: 1rem;
 }
+.graph-space{
+  position: relative;
+  width: 33%;
+  aspect-ratio: 1 / 1;
+  background-color: white;
+}
+.graph-space>*{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  mix-blend-mode: darken;
+}

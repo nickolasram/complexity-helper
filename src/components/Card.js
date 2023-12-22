@@ -1,21 +1,17 @@
-import { useState } from 'react';
-
-
+import React, {useState} from 'react'; 
 
 let Card = props => {
+    const [checked, setChecked] = useState(false);
     let algorithms = props.algorithms
-    const [shuffle, setShuffle] = useState(0);
+    const handleSelect = () =>{
+        checked ? setChecked(false) : setChecked(true)
+        props.onSelect(props.content, !checked)
+    }
     return (
-        <div 
-        className='card-wrapper'
-        onClick={() => setShuffle(1)}
-        onAnimationEnd={() => setShuffle(0)}
-        shuffle={shuffle}
-       >
-          <div 
-            className="comp-card"
-            >
+        <div className='card-wrapper'>
+          <div className="comp-card">
             <p className='complexity-symbol'><b>{props.content}</b></p>
+            <input type="checkbox" id={props.content} name={props.content} value={props.content} onClick={handleSelect}/>
             <section className='subCard'>
             {algorithms.map((alg,index)=>
                 (
