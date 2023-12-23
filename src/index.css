@@ -84,6 +84,7 @@ body{
   padding: .125rem;
   margin: .125rem;
   background-color: aliceblue;
+  font-size: .825em;
 }
 .algorithm-desc{
   max-width: 50%;
@@ -94,6 +95,7 @@ body{
   flex-direction: row;
   align-items: flex-start;
   gap: 1rem;
+  width: 100%;
 }
 .graph-space{
   position: relative;
@@ -109,4 +111,14 @@ body{
   width: 100%;
   aspect-ratio: 1 / 1;
   mix-blend-mode: darken;
+}
+.comp-name-select{
+  display: flex;
+}
+.complexity-symbol{
+  flex: 8;
+}
+.comp-checkbox,
+.card-placeholder{
+  flex: 1;
 }

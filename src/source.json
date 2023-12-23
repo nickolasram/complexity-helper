@@ -4,7 +4,8 @@
             {"symbol": "O^2",
              "examples": 
                 [
-                    "Quicksort"
+                    {"name": "Quicksort",
+                     "gif": "quick.gif"}
                 ],
              "image": "second.png",
              "description": "O^2 DESCRIPTION"
@@ -12,9 +13,12 @@
             {"symbol": "O(n log n)",
              "examples":
                 [
-                    "Mergesort",
-                    "Timsort",
-                    "Heapsort"
+                    {"name": "Mergesort",
+                     "gif": "merge.gif"},
+                    {"name": "Timsort",
+                     "gif": "tim.gif"},
+                    {"name": "Heapsort",
+                     "gif": "heap.gif"}
                 ],
              "image": "third.png",
              "description": "THIRD"
@@ -24,11 +28,14 @@
                     [
                         {"name": "Bubble sort",
                          "gif": "bubble.gif"},
-                        "Bubble sort",
-                        "Insertion sort",
-                        "Selection sort",
-                        "Tree sort",
-                        "Bucket Sort"
+                         {"name": "Insertion sort",
+                         "gif": "insertion.gif"},
+                        {"name": "Selection sort",
+                         "gif": "selection.gif"},
+                        {"name": "Tree sort",
+                         "gif": "tree.gif"},
+                        {"name": "Bucket Sort",
+                         "gif": "bucket.gif"}
                     ],
              "image": "On2.png",
              "description": "Quadratic time complexity. Often reflects the fact that the algorithm processes all (or a substantial number of) pairs of elements in a given input set. In the code it usually looks like a for loop embedded inside of another for loop. The examples are basic sorting algorithms like bubble, insertion or selection sort.",
@@ -38,17 +45,20 @@
             {"symbol": "O(n(log(n))^2)",
              "examples": 
                 [
-                    "Shell sort"
+                    {"name": "Shell sort",
+                     "gif": "shell.gif"}
                 ]},
             {"symbol": "O(nk)",
             "examples": 
                 [
-                    "Radix sort"
+                    {"name": "Radix sort",
+                     "gif": "radix.gif"}
                 ]},
             {"symbol": "O(n+k)",
             "examples": 
                 [
-                    "Counting sort"
+                    {"name": "Counting sort",
+                     "gif": "counting.gif"}
                 ]}
         ]
 }

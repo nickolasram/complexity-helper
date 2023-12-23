@@ -10,8 +10,11 @@ let Card = props => {
     return (
         <div className='card-wrapper'>
           <div className="comp-card">
-            <p className='complexity-symbol'><b>{props.content}</b></p>
-            <input type="checkbox" id={props.content} name={props.content} value={props.content} onClick={handleSelect}/>
+            <div className='comp-name-select'>
+                <div className='card-placeholder'></div>
+                <p className='complexity-symbol'><b>{props.content}</b></p>
+                <input type="checkbox" id={props.content} name={props.content} value={props.content} onClick={handleSelect} className='comp-checkbox'/>
+            </div>
             <section className='subCard'>
             {algorithms.map((alg,index)=>
                 (
