@@ -1,13 +1,14 @@
-import On2 from '../images/On2.png'
-import Second from '../images/second.png'
-import Third from '../images/third.png'
-
-let Graph = () => {
+let Graph = props => {
+    if (props.selections == 0) {
+        return <section className='graph-space'><p>empty</p></section>
+    }
     return(
         <section className='graph-space'>
-            <img src={On2}/>
-            <img src={Second}/>
-            <img src={Third}/>
+            {props.selections.map((selection,index)=>
+                (
+                    <img src={require('../images/'+selection.image)}/>
+                )
+            )}
         </section>
         )
 }

@@ -11,6 +11,7 @@ let Stack =props=> {
                 top={index}
                 algorithms={complexity.examples}
                 onSelect = {props.onSelect}
+                onSelectAlg = {props.onSelectAlg}
             />
         ))}
         </div>

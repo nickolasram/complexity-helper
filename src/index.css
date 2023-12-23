@@ -86,6 +86,10 @@ body{
   background-color: aliceblue;
   font-size: .825em;
 }
+.sort-name:hover,
+.sort-name:focus{
+  cursor: pointer;
+}
 .algorithm-desc{
   max-width: 50%;
 }

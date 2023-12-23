@@ -1,15 +1,6 @@
 {
     "complexities":
         [
-            {"symbol": "O^2",
-             "examples": 
-                [
-                    {"name": "Quicksort",
-                     "gif": "quick.gif"}
-                ],
-             "image": "second.png",
-             "description": "O^2 DESCRIPTION"
-            },
             {"symbol": "O(n log n)",
              "examples":
                 [
@@ -18,7 +9,9 @@
                     {"name": "Timsort",
                      "gif": "tim.gif"},
                     {"name": "Heapsort",
-                     "gif": "heap.gif"}
+                     "gif": "heap.gif"},
+                     {"name": "Quicksort",
+                     "gif": "quick.gif"}
                 ],
              "image": "third.png",
              "description": "THIRD"
@@ -27,7 +20,8 @@
             "examples":
                     [
                         {"name": "Bubble sort",
-                         "gif": "bubble.gif"},
+                         "gif": "bubble.gif",
+                         "description": "The simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order. This algorithm is not suitable for large data sets as its average and worst-case time complexity is quite high."},
                          {"name": "Insertion sort",
                          "gif": "insertion.gif"},
                         {"name": "Selection sort",
@@ -59,6 +53,10 @@
                 [
                     {"name": "Counting sort",
                      "gif": "counting.gif"}
-                ]}
+                ]},
+            {"symbol": "O(N)",
+             "examples": [],
+             "image": "On.png",
+             "description": "As N increases, so does the amount of operations needed to complete the problem. This is simple to understand because it’s an entirely linear relationship."}
         ]
 }

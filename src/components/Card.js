@@ -7,6 +7,9 @@ let Card = props => {
         checked ? setChecked(false) : setChecked(true)
         props.onSelect(props.content, !checked)
     }
+    const handleSelectAlg = alg =>{
+        props.onSelectAlg(alg)
+    }
     return (
         <div className='card-wrapper'>
           <div className="comp-card">
@@ -18,7 +21,7 @@ let Card = props => {
             <section className='subCard'>
             {algorithms.map((alg,index)=>
                 (
-                    <p className='sort-name'>{alg.name}</p>
+                    <p className='sort-name' onClick={() => handleSelectAlg(alg)}>{alg.name}</p>
                 )
             )}
         </section>

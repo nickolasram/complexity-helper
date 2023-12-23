@@ -1,25 +1,36 @@
 import React, {useState} from 'react'; 
-import On2g from '../images/bubble.gif'
 import Stack from './Stack';
 import Graph from './Graph';
-import data from '../source.json'
+import data from '../source.json';
+import CompDescription from './CompDescription';
+import NothingDescription from './NothingDescription';
+import AlgGif from './AlgGif';
 
 let complexities = data.complexities
 let getComplexity = symbol => complexities.find(obj => {return obj.symbol == symbol} )
 let defaultComplexity = getComplexity('O(N^2)')
 
 let MainContentPanel = () =>{
-    const [selections, setSelections] = useState([defaultComplexity])
+    const [selections, setSelections] = useState([])
     const [latestSelection, setLatest] = useState(defaultComplexity)
+    const [selectedAlg, setSelectedAlg] = useState(null)
+
     let handleSelect = (selection, status) => {
+        let checked = getComplexity(selection)
         if (status) {
-            let checked = getComplexity(selection)
             setLatest(checked)
             setSelections(selections.concat(checked))
-            console.log(selection, selections, latestSelection)
         } else {
-            setSelections(selections.filter(obj => {return obj.symbol == selection}))
+            setSelections(selections.filter(obj => {return obj.symbol != selection}))
         }   
+    }
+
+    let handleSelectAlg = selection => {
+        setSelectedAlg(selection)
+    }
+
+    let testpress = () => {
+        document.getElementById('O(N)').checked = true;
     }
 
     return (
@@ -27,27 +38,17 @@ let MainContentPanel = () =>{
             <section className="sidebar-area">
                 <p>Slow</p>
                 <section className='sidebar'>
-                    <Stack onSelect={handleSelect} />
+                    <Stack onSelect={handleSelect} onSelectAlg={handleSelectAlg} />
                 </section>
                 <p>Fast</p>
+                <button onClick={testpress}>button</button>
             </section>
             <section className='main'>
                 <section className='graph-wrapper'>
-                    <Graph />
-                    <p className='algorithm-desc'><em>O(N^2)</em> {latestSelection.description}</p>
-                    {/* ALL THIS TEXT SHOULDN"T BE EMPHASIZED */}
+                    <Graph selections={selections} />
+                    {selections.length == 0 ? <NothingDescription /> : <CompDescription symbol={latestSelection.symbol} description={latestSelection.description}/>}
                 </section>
-                <section className='gif-wrapper'>
-                    <img src={On2g}/>
-                    <p className='algorithm-desc'>
-                        <em>Bubble Sort:</em> is the simplest sorting algorithm 
-                        that works by repeatedly 
-                        swapping the adjacent 
-                        elements if they are in the wrong order. 
-                        This algorithm is not suitable for large data 
-                        sets as its average and worst-case time complexity is quite high.
-                    </p>
-                </section>
+                <AlgGif alg={selectedAlg} />
             </section>
         </section>
     );
