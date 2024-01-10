@@ -9,6 +9,14 @@ let Card = props => {
     }
     const handleSelectAlg = alg =>{
         props.onSelectAlg(alg)
+        document.getElementById(props.content).checked = true;
+        if (checked == false) {
+            // TODO: REACT NOT SETTING BEFORE PERFORMING REST OF FUNCTION
+            props.onSelect(props.content, !checked)
+            setChecked(true)
+        } else {
+            props.onSelect(props.content, checked)
+        }
     }
     return (
         <div className='card-wrapper'>

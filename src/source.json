@@ -1,23 +1,26 @@
 {
-    "complexities":
+    "complexitiesO":
         [
-            {"symbol": "O(n log n)",
-             "examples":
-                [
-                    {"name": "Mergesort",
-                     "gif": "merge.gif"},
-                    {"name": "Timsort",
-                     "gif": "tim.gif"},
-                    {"name": "Heapsort",
-                     "gif": "heap.gif"},
-                     {"name": "Quicksort",
-                     "gif": "quick.gif"}
-                ],
-             "image": "third.png",
-             "description": "THIRD"
+            {
+                "symbol": "O(n log n)",
+                "examples":
+                    [
+                        {"name": "Mergesort",
+                        "gif": "placeholderRectangle.png"},
+                        {"name": "Timsort",
+                        "gif": "placeholderRectangle.png"},
+                        {"name": "Heapsort",
+                        "gif": "placeholderRectangle.png"},
+                        {"name": "Quicksort",
+                        "gif": "placeholderRectangle.png"}
+                    ],
+                "image": "placeholderSquare.png",
+                "description": "NLOGN Description goes here",
+                "rank": 6
             },
-            {"symbol": "O(N^2)",
-            "examples":
+            {
+                "symbol": "O(N^2)",
+                "examples":
                     [
                         {"name": "Bubble sort",
                          "gif": "bubble.gif",
@@ -25,38 +28,84 @@
                          {"name": "Insertion sort",
                          "gif": "insertion.gif"},
                         {"name": "Selection sort",
-                         "gif": "selection.gif"},
+                         "gif": "placeholderRectangle.png"},
                         {"name": "Tree sort",
-                         "gif": "tree.gif"},
+                         "gif": "placeholderRectangle.png"},
                         {"name": "Bucket Sort",
-                         "gif": "bucket.gif"}
+                         "gif": "placeholderRectangle.png"}
                     ],
-             "image": "On2.png",
-             "description": "Quadratic time complexity. Often reflects the fact that the algorithm processes all (or a substantial number of) pairs of elements in a given input set. In the code it usually looks like a for loop embedded inside of another for loop. The examples are basic sorting algorithms like bubble, insertion or selection sort.",
-             "resources": [],
-             "rank": "bad"
+                "image": "On2.png",
+                "description": "Quadratic time complexity. Often reflects the fact that the algorithm processes all (or a substantial number of) pairs of elements in a given input set. In the code it usually looks like a for loop embedded inside of another for loop. The examples are basic sorting algorithms like bubble, insertion or selection sort.",
+                "resources": [],
+                "rank": 8
             }, 
-            {"symbol": "O(n(log(n))^2)",
-             "examples": 
-                [
-                    {"name": "Shell sort",
-                     "gif": "shell.gif"}
-                ]},
+            {
+                "symbol": "O(n(log(n))^2)",
+                "examples": 
+                    [
+                        {"name": "Shell sort",
+                        "gif": "placeholderRectangle.png"}
+                    ],
+                "image": "placeholderSquare.png",
+                "description": "NLOGN2 Description goes here",
+                "rank": 7
+            },
             {"symbol": "O(nk)",
             "examples": 
                 [
                     {"name": "Radix sort",
-                     "gif": "radix.gif"}
-                ]},
-            {"symbol": "O(n+k)",
-            "examples": 
-                [
-                    {"name": "Counting sort",
-                     "gif": "counting.gif"}
-                ]},
-            {"symbol": "O(N)",
-             "examples": [],
-             "image": "On.png",
-             "description": "As N increases, so does the amount of operations needed to complete the problem. This is simple to understand because it’s an entirely linear relationship."}
+                     "gif": "placeholderRectangle.png",
+                     "description": "Radix Sort is a linear sorting algorithm. Radix Sort's time complexity of O(nd), where n is the size of the array and d is the number of digits in the largest number. It is not an in-place sorting algorithm because it requires extra space. The time complexity of radix sort is O(n) because each digit is sorted independently. Some consider Radix sort to have a time complexity of O(N)."}
+                ],
+                "image": "placeholderSquare.png",
+                "description": "NK Description goes here",
+                 "rank": 5},
+            {
+                "symbol": "O(n+k)",
+                "examples": 
+                    [
+                        {"name": "Counting sort",
+                        "gif": "placeholderRectangle.png"}
+                    ],
+                "image": "placeholderSquare.png",
+                "description": "N+K Description goes here",
+                "rank": 4},
+            {
+                "symbol": "O(N)",
+                "examples": 
+                    [],
+                "image": "On.png",
+                "description": "As N increases, so does the amount of operations needed to complete the problem. This is simple to understand because it’s an entirely linear relationship.",
+                "rank": 3},
+            {
+                "symbol": "O(1)",
+                "examples": 
+                    [],
+                "image": "third.png",
+                "description": "Constant time",
+                "rank": 1
+            },
+            {
+                "symbol": "O(2^N)",
+                "examples": 
+                    [],
+                "image": "placeholderSquare.png",
+                "description": "Worst time",
+                "rank": 9
+            },
+            {
+                "symbol": "O(log(N))",
+                "examples": 
+                    [
+                        {
+                            "name": "binary search",
+                            "gif": "placeholderRectangle.png"
+                        }
+                    ],
+                "image": "placeholderSquare.png",
+                "description": "Good time",
+                "rank": 2
+            }
+
         ]
 }

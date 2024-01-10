@@ -7,7 +7,7 @@ let AlgGif = props =>{
     }
     return (
         <section className='gif-wrapper'>
-            <img src={require('../images/'+props.alg.gif)}/>
+            <img src={require('../images/'+props.alg.gif)} className="algGif"/>
             <p className='algorithm-desc'> <em>{props.alg.name}</em>: {props.alg.description}</p>
         </section>
     );

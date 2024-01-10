@@ -1,6 +1,6 @@
 let Graph = props => {
     if (props.selections == 0) {
-        return <section className='graph-space'><p>empty</p></section>
+        return <section className='graph-space'></section>
     }
     return(
         <section className='graph-space'>

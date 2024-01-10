@@ -1,18 +1,17 @@
 import React, {useState} from 'react'; 
-import Stack from './Stack';
 import Graph from './Graph';
 import data from '../source.json';
 import CompDescription from './CompDescription';
 import NothingDescription from './NothingDescription';
 import AlgGif from './AlgGif';
+import Sidebar from './Sidebar';
 
-let complexities = data.complexities
+let complexities = data.complexitiesO
 let getComplexity = symbol => complexities.find(obj => {return obj.symbol == symbol} )
-let defaultComplexity = getComplexity('O(N^2)')
 
 let MainContentPanel = () =>{
     const [selections, setSelections] = useState([])
-    const [latestSelection, setLatest] = useState(defaultComplexity)
+    const [latestSelection, setLatest] = useState(null)
     const [selectedAlg, setSelectedAlg] = useState(null)
 
     let handleSelect = (selection, status) => {
@@ -22,27 +21,24 @@ let MainContentPanel = () =>{
             setSelections(selections.concat(checked))
         } else {
             setSelections(selections.filter(obj => {return obj.symbol != selection}))
+            if (latestSelection.examples?.some(obj=>{return obj.name == selectedAlg?.name})){
+                setSelectedAlg(null)
+            }
+            setLatest(false)
         }   
     }
 
     let handleSelectAlg = selection => {
-        setSelectedAlg(selection)
-    }
-
-    let testpress = () => {
-        document.getElementById('O(N)').checked = true;
+        if (selection == selectedAlg) {
+            setSelectedAlg(null)
+        } else{
+            setSelectedAlg(selection)
+        }
     }
 
     return (
         <section className='main-content-panel'>
-            <section className="sidebar-area">
-                <p>Slow</p>
-                <section className='sidebar'>
-                    <Stack onSelect={handleSelect} onSelectAlg={handleSelectAlg} />
-                </section>
-                <p>Fast</p>
-                <button onClick={testpress}>button</button>
-            </section>
+            <Sidebar onSelect={handleSelect} onSelectAlg={handleSelectAlg}/>
             <section className='main'>
                 <section className='graph-wrapper'>
                     <Graph selections={selections} />
