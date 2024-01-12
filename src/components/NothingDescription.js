@@ -1,7 +1,8 @@
+import FormattedP from './FormattedP';
+
 let NothingDescription = () => {
     return (
-        <p>Select a complexity or algorithm to get started. 
-            You can select multiple complexities to compare their graphs.</p>
+        <FormattedP givenText={"O(N^2) O(N^2)"}/>
     )
 }
 export default NothingDescription;

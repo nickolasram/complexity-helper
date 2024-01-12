@@ -2,19 +2,19 @@
     "complexitiesO":
         [
             {
-                "symbol": "O(n log n)",
+                "symbol": "O(NlogN)",
                 "examples":
                     [
                         {"name": "Mergesort",
-                        "gif": "placeholderRectangle.png"},
+                        "gif": "merge.gif"},
                         {"name": "Timsort",
                         "gif": "placeholderRectangle.png"},
                         {"name": "Heapsort",
-                        "gif": "placeholderRectangle.png"},
+                        "gif": "heap.gif"},
                         {"name": "Quicksort",
-                        "gif": "placeholderRectangle.png"}
+                        "gif": "quick.gif"}
                     ],
-                "image": "placeholderSquare.png",
+                "image": "NlogN.png",
                 "description": "NLOGN Description goes here",
                 "rank": 6
             },
@@ -28,60 +28,60 @@
                          {"name": "Insertion sort",
                          "gif": "insertion.gif"},
                         {"name": "Selection sort",
-                         "gif": "placeholderRectangle.png"},
+                         "gif": "selection.gif"},
                         {"name": "Tree sort",
-                         "gif": "placeholderRectangle.png"},
+                         "gif": "tree.gif"},
                         {"name": "Bucket Sort",
-                         "gif": "placeholderRectangle.png"}
+                         "gif": "bucket.gif"}
                     ],
-                "image": "On2.png",
+                "image": "N2.png",
                 "description": "Quadratic time complexity. Often reflects the fact that the algorithm processes all (or a substantial number of) pairs of elements in a given input set. In the code it usually looks like a for loop embedded inside of another for loop. The examples are basic sorting algorithms like bubble, insertion or selection sort.",
                 "resources": [],
                 "rank": 8
             }, 
             {
-                "symbol": "O(n(log(n))^2)",
+                "symbol": "O(N(logN)^2)",
                 "examples": 
                     [
                         {"name": "Shell sort",
-                        "gif": "placeholderRectangle.png"}
+                        "gif": "shell.gif"}
                     ],
-                "image": "placeholderSquare.png",
+                "image": "NlogN2.png",
                 "description": "NLOGN2 Description goes here",
                 "rank": 7
             },
-            {"symbol": "O(nk)",
+            {"symbol": "O(NK)",
             "examples": 
                 [
                     {"name": "Radix sort",
-                     "gif": "placeholderRectangle.png",
+                     "gif": "radix.gif",
                      "description": "Radix Sort is a linear sorting algorithm. Radix Sort's time complexity of O(nd), where n is the size of the array and d is the number of digits in the largest number. It is not an in-place sorting algorithm because it requires extra space. The time complexity of radix sort is O(n) because each digit is sorted independently. Some consider Radix sort to have a time complexity of O(N)."}
                 ],
-                "image": "placeholderSquare.png",
+                "image": "NK.png",
                 "description": "NK Description goes here",
                  "rank": 5},
             {
-                "symbol": "O(n+k)",
+                "symbol": "O(N+K)",
                 "examples": 
                     [
                         {"name": "Counting sort",
-                        "gif": "placeholderRectangle.png"}
+                        "gif": "counting.gif"}
                     ],
-                "image": "placeholderSquare.png",
+                "image": "NplusK.png",
                 "description": "N+K Description goes here",
                 "rank": 4},
             {
                 "symbol": "O(N)",
                 "examples": 
                     [],
-                "image": "On.png",
+                "image": "N.png",
                 "description": "As N increases, so does the amount of operations needed to complete the problem. This is simple to understand because it’s an entirely linear relationship.",
                 "rank": 3},
             {
                 "symbol": "O(1)",
                 "examples": 
                     [],
-                "image": "third.png",
+                "image": "1.png",
                 "description": "Constant time",
                 "rank": 1
             },
@@ -89,7 +89,7 @@
                 "symbol": "O(2^N)",
                 "examples": 
                     [],
-                "image": "placeholderSquare.png",
+                "image": "2N.png",
                 "description": "Worst time",
                 "rank": 9
             },
@@ -99,10 +99,10 @@
                     [
                         {
                             "name": "binary search",
-                            "gif": "placeholderRectangle.png"
+                            "gif": "binary.gif"
                         }
                     ],
-                "image": "placeholderSquare.png",
+                "image": "logN.png",
                 "description": "Good time",
                 "rank": 2
             }

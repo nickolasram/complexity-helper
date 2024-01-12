@@ -1,6 +1,8 @@
+import empty from '../images/empty.png';
+
 let Graph = props => {
     if (props.selections == 0) {
-        return <section className='graph-space'></section>
+        return <section className='graph-space'><img src={empty}/></section>
     }
     return(
         <section className='graph-space'>

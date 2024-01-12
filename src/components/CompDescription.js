@@ -1,6 +1,11 @@
-let CompDescription = props =>{
+import FormattedP from './FormattedP';
+
+let CompDescription = ({symbol, description}) =>{
     return (
-        <p className='algorithm-desc'><em>{props.symbol}</em> {props.description}</p>
+        <section className='algorithm-desc'>
+            <FormattedP givenText={symbol} symbolBool={true}/>
+            <FormattedP givenText={description} />
+        </section>
     );
 }
 export default CompDescription

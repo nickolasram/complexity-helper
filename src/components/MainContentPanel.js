@@ -21,10 +21,12 @@ let MainContentPanel = () =>{
             setSelections(selections.concat(checked))
         } else {
             setSelections(selections.filter(obj => {return obj.symbol != selection}))
-            if (latestSelection.examples?.some(obj=>{return obj.name == selectedAlg?.name})){
-                setSelectedAlg(null)
+            if (selection == latestSelection?.symbol){
+                if (latestSelection.examples.some(obj=>{return obj.name == selectedAlg?.name})){
+                    setSelectedAlg(null)
+                }
+                setLatest(null)
             }
-            setLatest(false)
         }   
     }
 
@@ -42,7 +44,7 @@ let MainContentPanel = () =>{
             <section className='main'>
                 <section className='graph-wrapper'>
                     <Graph selections={selections} />
-                    {selections.length == 0 ? <NothingDescription /> : <CompDescription symbol={latestSelection.symbol} description={latestSelection.description}/>}
+                    {latestSelection == null ? <NothingDescription /> : <CompDescription symbol={latestSelection.symbol} description={latestSelection.description}/>}
                 </section>
                 <AlgGif alg={selectedAlg} />
             </section>

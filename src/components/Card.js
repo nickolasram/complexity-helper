@@ -1,4 +1,5 @@
 import React, {useState} from 'react'; 
+import FormattedP from './FormattedP';
 
 let Card = props => {
     const [checked, setChecked] = useState(false);
@@ -23,7 +24,7 @@ let Card = props => {
           <div className="comp-card">
             <div className='comp-name-select'>
                 <div className='card-placeholder'></div>
-                <p className='complexity-symbol'><b>{props.content}</b></p>
+                <FormattedP givenText={props.content} symbolBool={true}/>
                 <input type="checkbox" id={props.content} name={props.content} value={props.content} onClick={handleSelect} className='comp-checkbox'/>
             </div>
             <section className='subCard'>

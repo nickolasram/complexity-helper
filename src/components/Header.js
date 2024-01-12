@@ -5,7 +5,7 @@ let Header =()=>{
     <section className="banner">
         <h1><Link to={"/"}>Complexity Helper</Link></h1>
         <p><Link to={"/Exercises"}>Exercises</Link></p>
-        <p><a>Flash Cards</a></p>
+        <p><Link to={"/Flashcards"}>Flashcards</Link></p>
     </section>
     );
 }
