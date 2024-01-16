@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
-  /* --bg-color: rgb(244, 244, 244) */
     --bg-color: white
 }
 
@@ -18,13 +17,11 @@ body{
   background-size: 50%;
 }
 #wrapper{
-  display: grid;
-  grid-template: 
-      "h h" 10vh
-      "s m" 90vh / 30vw auto;
+  display: flex;
+  flex-direction: column;
 }
 .banner{
-  grid-area: h;
+  height: 10vh;
   background-color: rgb(120, 68, 241);
   display: flex;
   align-items: center;
@@ -53,8 +50,11 @@ body{
 }
 .main-content-panel{
   display: flex;
-  width: 100vw;
+  width: 85vw;
   justify-content: center;
+  background-color: white;
+  min-height: 90vh;
+  margin-inline: auto;
 }
 .sidebar-area{
   grid-area: s;
@@ -191,10 +191,78 @@ body{
 .algorithm-desc{
   overflow-y: auto;
 }
+/* ==========
+ Flashcard
+========== */
 .flashcard{
-  width: 400px;
-  height: 250px;
-  border: 1px solid black;
-  background-color: white;
-  margin: auto;
+    width: 400px;
+    height: 250px;
+    margin: auto;
+    background-color: transparent;
+    perspective: 1000px;
+}
+.flashcard-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s ease-out;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 5px;
+}
+.flashcard-front{
+    border-radius: inherit;
+    background-color: white;
+    color: black;
+}
+.flashcard-back{
+    border-radius: inherit;
+    background-color: #d4d4d4;
+    color: black;
+    transform: rotateY(180deg);
+}
+.flashcard-front, .flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.flip {
+    transform: rotateY(180deg);
+}
+
+.fccategory{
+    border: 2px solid black;
+    width: 80%;
+    height: 80px;
+    border-radius: 3px;
+}
+
+.category-list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.flashcard-scroller{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.scroller-arrow{
+    font-size: 3rem;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
 }

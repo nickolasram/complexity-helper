@@ -107,5 +107,24 @@
                 "rank": 2
             }
 
-        ]
+        ],
+    "review-questions": {
+        "data structures": [
+            {
+                "question": "Quick sort running time depends on the selection of the ___ .",
+                "answer": "pivot element",
+                "context": "If the pivot element is balanced, quick sort running time will be less."
+            },
+            {
+                "question": "An adaptive sorting algorithm takes advantage of ___ elements.",
+                "answer": "sorted"
+            },
+            {
+                "question": "Which sorting algorithms maintain two sub-lists, one sorted and one to be sorted?",
+                "answer": "Selection sort and insertion sort.",
+                "context": "Both maintain two sublists and then check the unsorted list for next sorted element."
+            }
+        ],
+        "algorithms": []
+    }
 }
