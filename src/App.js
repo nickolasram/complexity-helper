@@ -13,7 +13,7 @@ function App() {
             <Route path='/Home' element={<Main />} />
             <Route path='/Exercises' element={<Exercises />} />
             <Route path='/Flashcards' element={<FlashcardCategories />} />
-            <Route path='/FlashcardPage' element={<FlashcardPage />} />
+            <Route path='/FlashcardPage/:category' element={<FlashcardPage />} />
         </Routes>
     </Router>
   );

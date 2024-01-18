@@ -192,6 +192,48 @@ body{
   overflow-y: auto;
 }
 /* ==========
+ Flashcard Page
+========== */
+.flashcard-panel{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* gap: 2rem; */
+}
+.flashcard-submenu{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 30%;
+  align-items: center;
+}
+.flashcard-submenu p{
+  line-height: 2rem;
+  cursor: pointer;
+  vertical-align:middle;
+  font-weight: bolder;
+  font-size: 1.125rem;
+}
+.flashcard-scroller{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.scroller-arrow{
+    font-size: 3rem;
+    font-weight: bolder;
+    border: 1px solid black;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* ==========
  Flashcard
 ========== */
 .flashcard{
@@ -200,13 +242,14 @@ body{
     margin: auto;
     background-color: transparent;
     perspective: 1000px;
+    cursor: pointer;
 }
 .flashcard-inner{
     position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.6s ease-out;
+    transition: transform 0.3s ease-out;
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border: 2px solid black;
@@ -220,7 +263,7 @@ body{
 }
 .flashcard-back{
     border-radius: inherit;
-    background-color: #d4d4d4;
+    background-color: #eee;
     color: black;
     transform: rotateY(180deg);
 }
@@ -230,39 +273,48 @@ body{
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 1.5rem;
 }
 .flip {
     transform: rotateY(180deg);
 }
+.flashcard-front img{
+  max-height: 60%;
+}
+.fc-context{
+  color: #222;
+}
 
 .fccategory{
     border: 2px solid black;
-    width: 80%;
-    height: 80px;
+    width: 20%;
+    padding-inline: 1rem;
+    justify-content: center;
+    gap: 2rem;
     border-radius: 3px;
+    cursor: pointer;
+    aspect-ratio: 1 / 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    word-break: break-word;
+    hyphens: auto;
 }
 
 .category-list{
     display: flex;
-    flex-direction: column;
     width: 100%;
     gap: 2rem;
     align-items: center;
     justify-content: center;
 }
 
-.flashcard-scroller{
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-.scroller-arrow{
-    font-size: 3rem;
-    font-weight: bold;
-    border: 1px solid black;
-    border-radius: 50%;
-    aspect-ratio: 1 / 1;
-    width: 5rem;
-    height: 5rem;
-    text-align: center;
+.category-title{
+  font-size: 1.5rem;
+  font-weight: bolder;
 }

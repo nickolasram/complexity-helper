@@ -109,14 +109,23 @@
 
         ],
     "review-questions": {
+        "basics": [],
         "data structures": [
             {
-                "question": "Quick sort running time depends on the selection of the ___ .",
+                "image": "minheap1.png",
+                "question": "The following is a valid binary min heap. (T/F)",
+                "answer": "True",
+                "context": "In a Min Binary Heap, the key at the root must be minimum among all keys present in Binary Heap. The same property must be recursively true for all nodes in Binary Tree."
+            }
+        ],
+        "algorithms": [
+            {
+                "question": "Quick sort running time depends on the selection of the _ .",
                 "answer": "pivot element",
                 "context": "If the pivot element is balanced, quick sort running time will be less."
             },
             {
-                "question": "An adaptive sorting algorithm takes advantage of ___ elements.",
+                "question": "An adaptive sorting algorithm takes advantage of _ elements.",
                 "answer": "sorted"
             },
             {
@@ -125,6 +134,6 @@
                 "context": "Both maintain two sublists and then check the unsorted list for next sorted element."
             }
         ],
-        "algorithms": []
+        "complexities": []
     }
 }
