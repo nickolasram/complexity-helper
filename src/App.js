@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import './index2.css';
+import './index.css';
 import Main from './pages/Main'
 import Exercises from './pages/Exercises';
 import FlashcardCategories from './pages/Categories';
