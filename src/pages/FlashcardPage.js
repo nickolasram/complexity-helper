@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react'; 
+import React, {useState, useRef, forceU} from 'react'; 
 import {useParams, useNavigate} from 'react-router-dom';
 import Header from "../components/Header";
 import Flashcard from "../components/Flashcard";
@@ -23,26 +23,29 @@ let FlashcardPage =()=>{
     const [cardContent, setCardContent] = useState(questions[intialIndex]);
 
     let scrollRight = () =>{
-        // let card = document.getElementsByClassName('flip');
-        // if (card.length > 0) {
-        //     let classes = card[0].getAttribute("class").split(" ")
-        //     classes[1] = "no-flip"
-        //     card[0].setAttribute("class", classes.join(" "))
-        // }
-        let card = document.getElementsByClassName('flashcard');
+        let card = document.getElementsByClassName('flashcard')[0];
+        card.style.animationName = "fcmoveright";
         indexTracker.current++;
         if (indexTracker.current==questions.length){
             indexTracker.current = 0;
         }
         setCardContent(questions[indexTracker.current])
+        setTimeout(() => {
+            card.style.animationName = ""
+          }, 500);
     }
 
     let scrollLeft = () =>{
+        let card = document.getElementsByClassName('flashcard')[0];
+        card.style.animationName = "fcmoveleft";
         indexTracker.current--;
         if (indexTracker.current==-1){
             indexTracker.current = questions.length-1;
         }
         setCardContent(questions[indexTracker.current])
+        setTimeout(() => {
+            card.style.animationName = ""
+          }, 500);
     }
 
     const navigate = useNavigate();
