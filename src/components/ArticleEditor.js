@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 const ArticleEditor =()=> {
     const [segments, setSegments] = useState([null]);
 
-    // have to read from and write to json object now
+    // have to read from and write to json object now  
 
 
 
