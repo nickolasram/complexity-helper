@@ -438,3 +438,6 @@ body{
 .p-editor-input{
   font-size: 1em;
 }
+.article-editor-img{
+  height: 200px;
+}

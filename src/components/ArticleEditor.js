@@ -4,6 +4,7 @@ const ArticleEditor =()=> {
     const [segments, setSegments] = useState([null]);
 
     // have to read from and write to json object now  
+    // <img src={}/>
 
     let setTempValues=()=>{
         for (const i in segments){
@@ -48,20 +49,26 @@ const ArticleEditor =()=> {
         )
     }
 
+    const uploadImage=()=>{
+        return null
+    }
+
+    const imageInput=(object, id)=>{
+        if (object.value == null){
+            return <input type='file' id={id} className='image-editor-input'></input>
+        } else {
+            return <img src={require('../images/'+object.value)} className='article-editor-img'></img>
+        }
+    }
+
 /*
 -Create segment
--if object is null (can we do this -> object?) 
-    or value is null/empty then render an input field
--if there is a value, show that picture
 -implement a replace button (probably just sets the value to null/empty)
--currently, default is empty. can set to null? will it break anything?
 -if images are deleted, for now just keep them in the database
 -if image is uploaded, generate a new name. Maybe have field to let admin choose the name
 -will have to generate a new file, a copy, to replace it
     or else I'll just have to use its original name which could 
     create conflicts if someone uploads files with same name
--upload test image
-- test rendering and style
 */
 
     const renderSegment=(object)=>{
@@ -78,7 +85,7 @@ const ArticleEditor =()=> {
                 child = <textarea id={elementID} className='p-editor-input' rows="4" cols="80"></textarea>
                 break;
             case "image":
-                child = <input type='file' id={elementID} className='image-editor-input'></input>
+                child = imageInput(object, elementID);
                 break;
             case "code":
                 child = <textarea id={elementID} className='code-editor-input' rows="10" cols="30"></textarea>
@@ -95,10 +102,10 @@ const ArticleEditor =()=> {
         let ex = {
             type: inputType,
             index: segments.length,
-            value: ""
+            value: "Ramirez_Nick_Project02.jpg"
         }
         if (segments[0] == null) {
-            setSegments([{type: inputType, index: 0, value: "" }])
+            setSegments([ex])
         } else {
             setSegments(
                 segments.concat(ex)
