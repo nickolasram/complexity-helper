@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
 :root{
     --bg-color: white
 }
@@ -16,6 +17,74 @@ body{
   background-position: 50% 0;
   background-size: 50%;
 }
+
+
+/* ==========
+
+ Typography
+
+ ========== */
+ .banner>*>a{
+  color: white;
+  text-decoration: none;
+}
+.complexity-symbol{
+  font-weight: bold;
+}
+.category-title{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.sort-name{
+  font-size: .825em;
+}
+.gif-wrapper,
+.graph-wrapper{
+  color: azure;
+}
+.graph-wrapper::before,
+.gif-wrapper::before{
+    color: black;  
+}
+.flashcard-submenu p{
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+.scroller-arrow{
+  font-size: 3rem;
+  font-weight: bold;
+}
+.inline-icon{
+  font-family: 'Courier New', Courier, monospace;
+}
+.flashcard-front,
+.flashcard-back{
+  color: black;
+}
+.fc-context{
+  color: #222;
+}
+.article-editor-field-controls>button,
+.article-editor-field-controls>div>button{
+  font-weight: bold;
+}
+.editor-button{
+  font-weight: bold;
+}
+.h2-editor-input{
+  font-size: 1.25em;
+  font-weight: 500;
+}
+.p-editor-input{
+  font-size: 1em;
+}
+
+
+ /* ==========
+
+ wrapper, banner
+
+ ========== */
 #wrapper{
   display: flex;
   flex-direction: column;
@@ -30,10 +99,37 @@ body{
   gap: 3rem;
   border-bottom: 3px solid rgb(143, 191, 226);
 }
-.banner>*>a{
-    color: white;
-    text-decoration: none;
+
+
+ /* ==========
+
+ home
+
+ ========== */
+.main{
+  grid-area: m;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-block-start: 3rem;
+  padding-inline-end: 3rem;
+  gap: 1rem;
+  width: 60%;
 }
+.main-content-panel{
+  display: flex;
+  width: 85vw;
+  justify-content: center;
+  background-color: white;
+  min-height: 90vh;
+  margin-inline: auto;
+}
+.complexity-symbol{
+  flex: 8;
+}
+ /* ======sidebar====== */
 .sidebar-checklist{
   background-color: white;
   display: flex;
@@ -48,14 +144,6 @@ body{
   max-height: 70vh;
   overflow-y: auto;
 }
-.main-content-panel{
-  display: flex;
-  width: 85vw;
-  justify-content: center;
-  background-color: white;
-  min-height: 90vh;
-  margin-inline: auto;
-}
 .sidebar-area{
   grid-area: s;
   padding-block: .5rem;
@@ -68,18 +156,10 @@ body{
   width: 25%;
   justify-content: center;
 }
-.main{
-  grid-area: m;
-  background-color: var(--bg-color);
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-  padding-block-start: 3rem;
-  padding-inline-end: 3rem;
-  gap: 1rem;
-  width: 60%;
+.speed-indicator{
+  height: 2em;
 }
+/* ======card====== */
 .comp-card{
   text-align: center;
   margin-block: .5rem;
@@ -98,12 +178,19 @@ body{
   padding: .125rem;
   margin: .125rem;
   background-color: aliceblue;
-  font-size: .825em;
 }
 .sort-name:hover,
 .sort-name:focus{
   cursor: pointer;
 }
+.comp-name-select{
+  display: flex;
+}
+.comp-checkbox,
+.card-placeholder{
+  flex: 1;
+}
+/* ======descriptions====== */
 .gif-wrapper,
 .graph-wrapper{
   display: flex;
@@ -112,21 +199,12 @@ body{
   gap: 1rem;
   width: 100%;
   padding-inline-end: 2rem;
-  /* border: 1px solid black; */
   padding: 1rem;
   border-radius: 5px 5px 0 0;
   position: relative;
   background-color: rgb(120, 68, 241);
-  /* box-shadow: inset 0px 0px 2px 2px #6f6f6f90; */
-  color: azure;
   z-index: 2;
   border-bottom: 8px solid rgb(166, 134, 241);
-}
-.graph-wrapper::before{
-    content: "Time Complexity:";
-}
-.gif-wrapper::before{
-    content: "Algorithm:";
 }
 .graph-wrapper::before,
 .gif-wrapper::before{
@@ -134,7 +212,6 @@ body{
     top: -2em;
     left: 0;
     opacity: .5;
-    color: black;  
 }
 .graph-wrapper::after,
 .gif-wrapper::after{
@@ -147,18 +224,15 @@ body{
     bottom: -16px;
     left: 0;
 }
-.gif-wrapper{
-  margin-top: 2.5rem;
-}
 .algGif,
 .graph-space{
   width: 33%;
   min-width: 33%;
   max-width: 33%;
 }
-.algGif{
-  opacity: 1;
-  background-color: tomato;
+/* ======descriptions-- complexity section====== */
+.graph-wrapper::before{
+    content: "Time Complexity:";
 }
 .graph-space{
   position: relative;
@@ -172,34 +246,55 @@ body{
   width: 100%;
   aspect-ratio: 1 / 1;
   mix-blend-mode: darken;
-  /* max-width: 100%; */
 }
-.comp-name-select{
-  display: flex;
+/* ======descriptions-- algorithm section====== */
+.gif-wrapper::before{
+    content: "Algorithm:";
 }
-.complexity-symbol{
-  flex: 8;
-  font-weight: bold;
-}
-.comp-checkbox,
-.card-placeholder{
-  flex: 1;
-}
-.speed-indicator{
-  height: 2em;
+.gif-wrapper{
+  margin-top: 2.5rem;
 }
 .algorithm-desc{
   overflow-y: auto;
 }
+
 /* ==========
+
+ Flashcard Hub Page
+
+ ========== */
+.category-list{
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.fccategory{
+  border: 2px solid black;
+  width: 20%;
+  padding-inline: 1rem;
+  justify-content: center;
+  gap: 2rem;
+  border-radius: 3px;
+  cursor: pointer;
+  aspect-ratio: 1 / 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* ==========
+
  Flashcard Page
-========== */
+
+ ========== */
 .flashcard-panel{
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-  /* gap: 2rem; */
 }
 .flashcard-submenu{
   width: 80%;
@@ -212,8 +307,6 @@ body{
   line-height: 2rem;
   cursor: pointer;
   vertical-align:middle;
-  font-weight: bolder;
-  font-size: 1.125rem;
 }
 .flashcard-scroller{
     display: flex;
@@ -221,8 +314,6 @@ body{
     gap: 2rem;
 }
 .scroller-arrow{
-    font-size: 3rem;
-    font-weight: bolder;
     border: 1px solid black;
     border-radius: 50%;
     aspect-ratio: 1 / 1;
@@ -232,12 +323,9 @@ body{
     background-color: white;
     cursor: pointer;
 }
-.inline-icon{
-  font-family: 'Courier New', Courier, monospace;
-}
-/* ==========
- Flashcard
-========== */
+
+
+/* ======Flashcard====== */
 .flashcard{
     width: 400px;
     height: 250px;
@@ -259,29 +347,27 @@ body{
     background-color: white;
     border-radius: 5px;
 }
+.flashcard-front, .flashcard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1.5rem;
+}
 .flashcard-front{
     border-radius: inherit;
     background-color: white;
-    color: black;
 }
 .flashcard-back{
     border-radius: inherit;
     background-color: #eee;
-    color: black;
     transform: rotateY(180deg);
-}
-.flashcard-front, .flashcard-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    gap: 1.5rem;
 }
 .flip {
     transform: rotateY(180deg);
@@ -289,39 +375,6 @@ body{
 .flashcard-front img{
   max-height: 60%;
 }
-.fc-context{
-  color: #222;
-}
-
-.fccategory{
-    border: 2px solid black;
-    width: 20%;
-    padding-inline: 1rem;
-    justify-content: center;
-    gap: 2rem;
-    border-radius: 3px;
-    cursor: pointer;
-    aspect-ratio: 1 / 1.5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    word-break: break-word;
-    hyphens: auto;
-}
-
-.category-list{
-    display: flex;
-    width: 100%;
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
-}
-
-.category-title{
-  font-size: 1.5rem;
-  font-weight: bolder;
-}
-
 @keyframes fcmoveright {
   0%   {
     transform: translateX(-2em);
@@ -344,7 +397,6 @@ body{
     opacity: 1;
   }
 }
-
 @keyframes fcmoveleft {
   0%   {
     transform: translateX(2em);
@@ -368,21 +420,23 @@ body{
   }
 }
 
+/* ==========
+
+ Article Editor Page
+
+ ========== */
 .article-editor{
   border: 2px solid black;
   background-color: aliceblue;
   min-height: 80vh;
-  /*  */
   max-width: 70%;
   margin: 0 auto;
-  /*  */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
   padding: 1rem;
 }
-
 .article-editor-field{
   display: flex;
   flex-direction: row;
@@ -399,7 +453,6 @@ body{
 .article-editor-field-controls>div>button{
   height: 1.5rem;
   width: 1.5rem;
-  font-weight: 900;
   background-color: rgba(240, 248, 255, 0.5);
   border-color: rgba(0,0,0,0.35);
 }
@@ -423,20 +476,13 @@ body{
   display: grid;
   grid-template-columns: auto auto;
 }
-
 .editor-button{
   padding: .25rem;
-  font-weight: bolder;
   border-radius: 5px;
   margin: .5rem;
 }
 .h2-editor-input{
-  font-size: 1.25em;
-  font-weight: 500;
   height: 1.25em;
-}
-.p-editor-input{
-  font-size: 1em;
 }
 .article-editor-img{
   height: 200px;
