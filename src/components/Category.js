@@ -6,7 +6,7 @@ let FCCategory =({category, items})=> {
 
     return (
         <div className="fccategory" onClick={handleOnClick}>
-            <p className='category-title' style={{textTransform: 'capitalize'}}>{category}</p>
+            <p className='fccategory__title' style={{textTransform: 'capitalize'}}>{category}</p>
             <p># of flashcards: {items}</p>
         </div>
     )

@@ -20,17 +20,17 @@ let Card = props => {
         }
     }
     return (
-        <div className='card-wrapper'>
+        <div className='wrapper--comp-card'>
           <div className="comp-card">
-            <div className='comp-name-select'>
-                <div className='card-placeholder'></div>
+            <div className='comp-card__name-select'>
+                <div className='comp-card__placeholder'></div>
                 <FormattedP givenText={props.content} symbolBool={true}/>
                 <input type="checkbox" id={props.content} name={props.content} value={props.content} onClick={handleSelect} className='comp-checkbox'/>
             </div>
-            <section className='subCard'>
+            <section className='comp-card__subCard'>
             {algorithms.map((alg,index)=>
                 (
-                    <p className='sort-name' onClick={() => handleSelectAlg(alg)}>{alg.name}</p>
+                    <p className='comp-card__sort-name' onClick={() => handleSelectAlg(alg)}>{alg.name}</p>
                 )
             )}
         </section>

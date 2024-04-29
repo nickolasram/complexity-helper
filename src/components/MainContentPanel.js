@@ -41,8 +41,8 @@ let MainContentPanel = () =>{
     return (
         <section className='main-content-panel'>
             <Sidebar onSelect={handleSelect} onSelectAlg={handleSelectAlg}/>
-            <section className='main'>
-                <section className='graph-wrapper'>
+            <section className='main-content-panel__main'>
+                <section className='main-content-panel__graph-wrapper'>
                     <Graph selections={selections} />
                     {latestSelection == null ? <NothingDescription /> : <CompDescription symbol={latestSelection.symbol} description={latestSelection.description}/>}
                 </section>

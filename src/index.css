@@ -31,37 +31,37 @@ body{
 .complexity-symbol{
   font-weight: bold;
 }
-.category-title{
+.fccategory__title{
   font-size: 1.5rem;
   font-weight: bold;
 }
-.sort-name{
+.comp-card__sort-name{
   font-size: .825em;
 }
 .gif-wrapper,
-.graph-wrapper{
+.main-content-panel__graph-wrapper{
   color: azure;
 }
-.graph-wrapper::before,
+.main-content-panel__graph-wrapper::before,
 .gif-wrapper::before{
     color: black;  
 }
-.flashcard-submenu p{
+.flashcards__submenu p{
   font-weight: bold;
   font-size: 1.125rem;
 }
-.scroller-arrow{
+.flashcards__scroller__arrow{
   font-size: 3rem;
   font-weight: bold;
 }
 .inline-icon{
   font-family: 'Courier New', Courier, monospace;
 }
-.flashcard-front,
-.flashcard-back{
+.flashcard__front,
+.flashcard__back{
   color: black;
 }
-.fc-context{
+.flashcard__context{
   color: #222;
 }
 .article-editor-field-controls>button,
@@ -106,7 +106,7 @@ body{
  home
 
  ========== */
-.main{
+.main-content-panel__main{
   grid-area: m;
   background-color: var(--bg-color);
   display: flex;
@@ -130,7 +130,7 @@ body{
   flex: 8;
 }
  /* ======sidebar====== */
-.sidebar-checklist{
+.sidebar__checklist{
   background-color: white;
   display: flex;
   justify-content: center;
@@ -144,7 +144,7 @@ body{
   max-height: 70vh;
   overflow-y: auto;
 }
-.sidebar-area{
+.sidebar{
   grid-area: s;
   padding-block: .5rem;
   background-color: var(--bg-color);
@@ -156,7 +156,7 @@ body{
   width: 25%;
   justify-content: center;
 }
-.speed-indicator{
+.sidebar__speed-indicator{
   height: 2em;
 }
 /* ======card====== */
@@ -164,35 +164,35 @@ body{
   text-align: center;
   margin-block: .5rem;
 }
-.card-wrapper{
+.wrapper--comp-card{
   border-bottom: 2px solid black;
 }
-.card-wrapper:last-child{
+.wrapper--comp-card:last-child{
   border: none;
 }
-.subCard {
+.comp-card__subCard {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-.sort-name{
+.comp-card__sort-name{
   padding: .125rem;
   margin: .125rem;
   background-color: aliceblue;
 }
-.sort-name:hover,
-.sort-name:focus{
+.comp-card__sort-name:hover,
+.comp-card__sort-name:focus{
   cursor: pointer;
 }
-.comp-name-select{
+.comp-card__name-select{
   display: flex;
 }
 .comp-checkbox,
-.card-placeholder{
+.comp-card__placeholder{
   flex: 1;
 }
 /* ======descriptions====== */
 .gif-wrapper,
-.graph-wrapper{
+.main-content-panel__graph-wrapper{
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -206,14 +206,14 @@ body{
   z-index: 2;
   border-bottom: 8px solid rgb(166, 134, 241);
 }
-.graph-wrapper::before,
+.main-content-panel__graph-wrapper::before,
 .gif-wrapper::before{
     position: absolute;
     top: -2em;
     left: 0;
     opacity: .5;
 }
-.graph-wrapper::after,
+.main-content-panel__graph-wrapper::after,
 .gif-wrapper::after{
     height: 8px;
     width: 100%;
@@ -231,7 +231,7 @@ body{
   max-width: 33%;
 }
 /* ======descriptions-- complexity section====== */
-.graph-wrapper::before{
+.main-content-panel__graph-wrapper::before{
     content: "Time Complexity:";
 }
 .graph-space{
@@ -291,29 +291,29 @@ body{
  Flashcard Page
 
  ========== */
-.flashcard-panel{
+.flashcards{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.flashcard-submenu{
+.flashcards__submenu{
   width: 80%;
   display: flex;
   justify-content: space-between;
   flex-basis: 30%;
   align-items: center;
 }
-.flashcard-submenu p{
+.flashcards__submenu p{
   line-height: 2rem;
   cursor: pointer;
   vertical-align:middle;
 }
-.flashcard-scroller{
+.flashcards__scroller{
     display: flex;
     align-items: center;
     gap: 2rem;
 }
-.scroller-arrow{
+.flashcards__scroller__arrow{
     border: 1px solid black;
     border-radius: 50%;
     aspect-ratio: 1 / 1;
@@ -335,7 +335,7 @@ body{
     cursor: pointer;
     animation-duration: 0.5s;
 }
-.flashcard-inner{
+.flashcard__inner{
     position: relative;
     width: 100%;
     height: 100%;
@@ -347,7 +347,7 @@ body{
     background-color: white;
     border-radius: 5px;
 }
-.flashcard-front, .flashcard-back {
+.flashcard__front, .flashcard__back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -360,11 +360,11 @@ body{
   padding: 2rem;
   gap: 1.5rem;
 }
-.flashcard-front{
+.flashcard__front{
     border-radius: inherit;
     background-color: white;
 }
-.flashcard-back{
+.flashcard__back{
     border-radius: inherit;
     background-color: #eee;
     transform: rotateY(180deg);
@@ -372,7 +372,7 @@ body{
 .flip {
     transform: rotateY(180deg);
 }
-.flashcard-front img{
+.flashcard__front img{
   max-height: 60%;
 }
 @keyframes fcmoveright {

@@ -4,14 +4,14 @@ let Flashcard = ({question, answer, context, image}) =>{
     const [flip, setFlip] = useState('no-flip')
     return (
         <div className="flashcard flashcard-moving" onClick={() => setFlip(flip == 'flip' ? 'no-flip' : 'flip')}>
-            <div className={"flashcard-inner " + flip}>
-                <div className="flashcard-front">
+            <div className={"flashcard__inner " + flip}>
+                <div className="flashcard__front">
                     <p>{question}</p>
                     <img src={image && require('../images/'+image)} />
                 </div>
-                <div className="flashcard-back">
+                <div className="flashcard__back">
                     <p>{answer}</p>
-                    <p className='fc-context'><i>{context && context}</i></p>
+                    <p className='flashcard__context'><i>{context && context}</i></p>
                 </div>
             </div>
         </div>
