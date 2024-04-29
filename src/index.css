@@ -57,11 +57,11 @@ body{
 .inline-icon{
   font-family: 'Courier New', Courier, monospace;
 }
-.flashcard-front,
-.flashcard-back{
+.flashcard__front,
+.flashcard__back{
   color: black;
 }
-.fc-context{
+.flashcard__context{
   color: #222;
 }
 .article-editor-field-controls>button,
@@ -335,7 +335,7 @@ body{
     cursor: pointer;
     animation-duration: 0.5s;
 }
-.flashcard-inner{
+.flashcard__inner{
     position: relative;
     width: 100%;
     height: 100%;
@@ -347,7 +347,7 @@ body{
     background-color: white;
     border-radius: 5px;
 }
-.flashcard-front, .flashcard-back {
+.flashcard__front, .flashcard__back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -360,11 +360,11 @@ body{
   padding: 2rem;
   gap: 1.5rem;
 }
-.flashcard-front{
+.flashcard__front{
     border-radius: inherit;
     background-color: white;
 }
-.flashcard-back{
+.flashcard__back{
     border-radius: inherit;
     background-color: #eee;
     transform: rotateY(180deg);
@@ -372,7 +372,7 @@ body{
 .flip {
     transform: rotateY(180deg);
 }
-.flashcard-front img{
+.flashcard__front img{
   max-height: 60%;
 }
 @keyframes fcmoveright {
