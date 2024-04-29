@@ -61,15 +61,15 @@ let FlashcardPage =()=>{
         <div id="wrapper">
             <Header />
             <div className="main-content-panel">
-                <div className="flashcard-panel">
-                    <div className='flashcard-submenu'>
+                <div className="flashcards">
+                    <div className='flashcards__submenu'>
                         <p onClick={handleOnClick}><span className="inline-icon">&#8617; </span> Go Back</p>
                         <p onClick={reshuffle}>Reshuffle <span className="inline-icon">&#10227;</span></p>
                     </div>
-                    <div className='flashcard-scroller'>
-                        <p className='scroller-arrow' onClick={scrollLeft}>&#8249;</p>
+                    <div className='flashcards__scroller'>
+                        <p className='flashcards__scroller__arrow' onClick={scrollLeft}>&#8249;</p>
                         <Flashcard question={cardContent.question} answer={cardContent.answer} context={cardContent.context} image={cardContent.image}/>
-                        <p className='scroller-arrow'  onClick={scrollRight}>&#8250;</p>
+                        <p className='flashcards__scroller__arrow'  onClick={scrollRight}>&#8250;</p>
                     </div>
                 </div>
             </div>

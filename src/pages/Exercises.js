@@ -9,7 +9,7 @@ let Exercises =()=> {
     return (
         <div id="wrapper">
             <Header />
-            <div className='stack'>
+            <div className='exercise-stack'>
                 {complexities.map((complexity, index)=>(
                     <section>
                         <ul>{complexity.symbol}</ul>
