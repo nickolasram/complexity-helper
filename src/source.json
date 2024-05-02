@@ -136,14 +136,16 @@
         ],
         "complexities": []
     },
-    "tutorials": {
-         "1": {
-             "title": "example tutorial data 1",
-             "level": "Introductory",
-             "type": "Math Concept",
-             "related": ["2", "4"],
-             "body": [
-                 {
+    "tutorials": [
+        {
+            "title": "Example Tutorial Title 1",
+            "level": "Introductory",
+            "type": "Math Concept",
+            "levelInt": 0,
+            "typeInt": 0,
+            "related": ["2", "4"],
+            "body": [
+                {
                     "position": 0,
                     "type": "n",
                     "content": "this is a quick blurb about example 1"
@@ -184,45 +186,49 @@
                 }
              ]
          },
-         "2": {
-            "title": "example tutorial data 2",
-            "level": "Introductory",
-            "type": "Data Struture",
-            "related": ["1"],
-            "body": [
+         {
+             "title": "Short Title 2",
+             "level": "Introductory",
+             "type": "Data Struture",
+             "levelInt": 0,
+             "typeInt": 2,
+             "related": ["1"],
+             "body": [
+                 {
+                    "position": 0,
+                    "type": "n",
+                    "content": "this is a quick blurb about example 2"
+                },
                 {
-                   "position": 0,
-                   "type": "n",
-                   "content": "this is a quick blurb about example 2"
-               },
-               {
-                   "position": 1,
-                   "type": "h2",
-                   "content": "this is a subheading of example 2"
-               },
-               {
-                   "position": 2,
-                   "type": "p",
-                   "content": "this is paragraph 1 of example 2"
-               },
-               {
-                   "position": 3,
-                   "type": "image",
-                   "content": "exampleDataImage3.jpg",
-                   "note": "This is a note about the first image",
-                   "desc": "description of image for accessibility"
-               },
-               {
-                   "position": 4,
-                   "type": "code",
-                   "content": "this is code"
-               }
-            ]
-        },
-        "3": {
-            "title": "example tutorial data 3",
+                    "position": 1,
+                    "type": "h2",
+                    "content": "this is a subheading of example 2"
+                },
+                {
+                    "position": 2,
+                    "type": "p",
+                    "content": "this is paragraph 1 of example 2"
+                },
+                {
+                    "position": 3,
+                    "type": "image",
+                    "content": "exampleDataImage3.jpg",
+                    "note": "This is a note about the first image",
+                    "desc": "description of image for accessibility"
+                },
+                {
+                    "position": 4,
+                    "type": "code",
+                    "content": "this is code"
+                }
+             ]
+         },
+        {
+            "title": "Example Tutorial Title 3",
             "level": "Novice",
             "type": "Sorting Algorithm",
+            "levelInt": 1,
+            "typeInt": 4,
             "related": ["1", "4"],
             "body": [
                 {
@@ -254,10 +260,12 @@
                }
             ]
         },
-        "4": {
-            "title": "example tutorial data 4",
+        {
+            "title": "Example Title 4",
             "level": "Novice",
             "type": "Search Algorithm",
+            "levelInt": 1,
+            "typeInt": 3,
             "related": ["1", "3"],
             "body": [
                 {
@@ -267,10 +275,12 @@
                }
             ]
         },
-        "5": {
-            "title": "example tutorial data 5",
+        {
+            "title": "Tutorial Title 5",
             "level": "Intermediate",
             "type": "Search Algorithm",
+            "levelInt": 2,
+            "typeInt": 3,
             "related": ["2", "3"],
             "body": [
                 {
@@ -280,10 +290,12 @@
                }
             ]
         },
-        "6": {
-            "title": "example tutorial data 6",
+        {
+            "title": "Example Tutorial Data 6",
             "level": "Advanced",
             "type": "Sorting Algorithm",
+            "levelInt": 3,
+            "typeInt": 4,
             "related": ["1"],
             "body": [
                 {
@@ -293,10 +305,72 @@
                }
             ]
         },
-        "7": {
-            "title": "example tutorial data 7",
+        {
+            "title": "Example Tutorial Data 7",
             "level": "Advanced",
             "type": "Coding Concept",
+            "levelInt": 3,
+            "typeInt": 1,
+            "related": ["1", "4", "5", "6"],
+            "body": [
+                {
+                   "position": 0,
+                   "type": "n",
+                   "content": "this is a quick blurb about example 7"
+               }
+            ]
+        },
+        {
+            "title": "Example Tutorial Data 8",
+            "level": "Advanced",
+            "type": "Coding Concept",
+            "levelInt": 3,
+            "typeInt": 1,
+            "related": ["1", "4", "5", "6"],
+            "body": [
+                {
+                   "position": 0,
+                   "type": "n",
+                   "content": "this is a quick blurb about example 7"
+               }
+            ]
+        },
+        {
+            "title": "Example Tutorial Data 9",
+            "level": "Advanced",
+            "type": "Coding Concept",
+            "levelInt": 3,
+            "typeInt": 1,
+            "related": ["1", "4", "5", "6"],
+            "body": [
+                {
+                   "position": 0,
+                   "type": "n",
+                   "content": "this is a quick blurb about example 7"
+               }
+            ]
+        },
+        {
+            "title": "Example Tutorial Data 10",
+            "level": "Advanced",
+            "type": "Coding Concept",
+            "levelInt": 3,
+            "typeInt": 1,
+            "related": ["1", "4", "5", "6"],
+            "body": [
+                {
+                   "position": 0,
+                   "type": "n",
+                   "content": "this is a quick blurb about example 7"
+               }
+            ]
+        },
+        {
+            "title": "Example Tutorial Data 11",
+            "level": "Advanced",
+            "type": "Coding Concept",
+            "levelInt": 3,
+            "typeInt": 1,
             "related": ["1", "4", "5", "6"],
             "body": [
                 {
@@ -306,5 +380,9 @@
                }
             ]
         }
+    ],
+    "filteringOptions": {
+        "levels" : ["Introductory", "Novice", "Intermediate", "Advanced"],
+        "types": ["Math Concept", "Coding Concept", "Data Struture", "Search Algorithm", "Sorting Algorithm"]
     }
 }
