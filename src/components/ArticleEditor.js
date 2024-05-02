@@ -13,7 +13,6 @@ const ArticleEditor =()=> {
             let inputValue = element.value;
             item.value = inputValue;
         }
-        console.log(segments)
     }
 
     const removeIndex=(object)=>{

@@ -4,7 +4,7 @@ import Main from './pages/Main'
 import Exercises from './pages/Exercises';
 import FlashcardCategories from './pages/Categories';
 import FlashcardPage from './pages/FlashcardPage';
-import Tutorial from './pages/Tutorial'
+import TutorialHub from './pages/Tutorials'
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
             <Route path='/Exercises' element={<Exercises />} />
             <Route path='/Flashcards' element={<FlashcardCategories />} />
             <Route path='/FlashcardPage/:category' element={<FlashcardPage />} />
-            <Route path='/Tutorial' element={<Tutorial />} />
+            <Route path='/Tutorial' element={<TutorialHub />} />
         </Routes>
     </Router>
   );
