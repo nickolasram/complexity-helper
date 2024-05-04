@@ -2,7 +2,7 @@ import {useNavigate} from 'react-router-dom';
 
 let FCCategory =({category, items})=> {
     const navigate = useNavigate();
-    const handleOnClick = () => navigate('/FlashcardPage/'+category);
+    const handleOnClick = () => navigate('/Flashcards/'+category);
 
     return (
         <div className="fccategory" onClick={handleOnClick}>

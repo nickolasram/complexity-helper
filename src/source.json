@@ -141,9 +141,7 @@
             "title": "Example Tutorial Title 1",
             "level": "Introductory",
             "type": "Math Concept",
-            "levelInt": 0,
-            "typeInt": 0,
-            "related": ["2", "4"],
+            "related": ["Short Title 2", "Example Title 4"],
             "body": [
                 {
                     "position": 0,
@@ -153,16 +151,16 @@
                 {
                     "position": 1,
                     "type": "h2",
-                    "content": "this is a subheading of example 1"
+                    "content": "This is a subheading of example 1"
                 },
                 {
                     "position": 2,
                     "type": "p",
-                    "content": "this is paragraph 1 of example 1"
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut ultrices lorem. Curabitur luctus, massa in facilisis blandit, ex sem pellentesque urna, et iaculis tellus eros id nisi. Sed finibus tempus elit, in ullamcorper purus mattis in. Nulla at lectus eget nisl finibus convallis a eu leo. Integer tincidunt, diam ac tincidunt lobortis, nisi arcu aliquam velit, eget rutrum purus sem vitae mauris. Nunc ut dui mauris. In tempor auctor eros a condimentum. Aliquam augue mauris, tincidunt vel nulla ac, mollis malesuada orci. Donec nec ipsum neque. Quisque in rhoncus leo. Nam tincidunt hendrerit risus, sit amet viverra erat lobortis ut. Fusce est ex, faucibus semper felis id, faucibus tincidunt nunc. Vestibulum pretium ligula in sodales aliquet. Donec at hendrerit enim. Quisque justo urna, iaculis quis tincidunt non, condimentum eu metus."
                 },
                 {
                     "position": 3,
-                    "type": "image",
+                    "type": "imageS",
                     "content": "exampleDataImage1.jpg",
                     "note": "This is a note about the first image",
                     "desc": "description of image for accessibility"
@@ -170,19 +168,29 @@
                 {
                     "position": 4,
                     "type": "p",
-                    "content": "this is paragraph 2 of example 1"
+                    "content": "Nunc nunc tellus, auctor et ipsum pharetra, feugiat imperdiet magna. Sed sollicitudin at nibh sed ultrices. Maecenas sagittis ut orci non tempus. In ac egestas mauris. Quisque lectus urna, commodo vitae lectus ut, venenatis volutpat sapien. Vestibulum aliquet enim pretium sapien commodo eleifend. Nulla non placerat velit. Curabitur nibh velit, convallis vel semper at, elementum faucibus dui. Proin eget tortor ornare, sodales tortor quis, eleifend ipsum. Aliquam tristique viverra consectetur. Phasellus ornare ante nec leo lacinia lobortis."
                 },
                 {
                     "position": 5,
-                    "type": "image",
+                    "type": "h2",
+                    "content": "Another subheading of example 1"
+                },
+                {
+                    "position": 6,
+                    "type": "imageL",
                     "content": "exampleDataImage2.jpg",
                     "note": "This is a note about the second image",
                     "desc": "description of image for accessibility"
                 },
                 {
-                    "position": 6,
+                    "position": 7,
+                    "type": "n",
+                    "content": "this is a quick blurb about the above image."
+                },
+                {
+                    "position": 8,
                     "type": "p",
-                    "content": "p3 of 1"
+                    "content": "Mauris orci ante, fringilla quis dapibus et, feugiat in nisl. Integer fermentum et ante vel porta. Praesent orci velit, rutrum eu libero at, efficitur interdum neque."
                 }
              ]
          },
@@ -192,7 +200,7 @@
              "type": "Data Struture",
              "levelInt": 0,
              "typeInt": 2,
-             "related": ["1"],
+             "related": ["Example Tutorial Title 1"],
              "body": [
                  {
                     "position": 0,
@@ -211,15 +219,25 @@
                 },
                 {
                     "position": 3,
-                    "type": "image",
+                    "type": "imageM",
                     "content": "exampleDataImage3.jpg",
                     "note": "This is a note about the first image",
                     "desc": "description of image for accessibility"
                 },
                 {
                     "position": 4,
+                    "type": "p",
+                    "content": "this is paragraph 1 of example 2"
+                },
+                {
+                    "position": 5,
                     "type": "code",
-                    "content": "this is code"
+                    "content": "for (let i = 0; i < 10; i++) {n>    if (i === 3) { break; }n>   text += 'The number is ' + i + '<br>';n>}"
+                },
+                {
+                    "position": 6,
+                    "type": "p",
+                    "content": "this is paragraph 1 of example 2"
                 }
              ]
          },
@@ -229,7 +247,7 @@
             "type": "Sorting Algorithm",
             "levelInt": 1,
             "typeInt": 4,
-            "related": ["1", "4"],
+            "related": ["Example Tutorial Title 1", "Example Title 4"],
             "body": [
                 {
                    "position": 0,
@@ -248,7 +266,7 @@
                },
                {
                    "position": 4,
-                   "type": "image",
+                   "type": "imageM",
                    "content": "exampleDataImage2.jpg",
                    "note": "This is a note about the first image",
                    "desc": "description of image for accessibility"
@@ -266,7 +284,7 @@
             "type": "Search Algorithm",
             "levelInt": 1,
             "typeInt": 3,
-            "related": ["1", "3"],
+            "related": ["Example Tutorial Title 1", "Example Tutorial Title 3"],
             "body": [
                 {
                    "position": 0,
@@ -281,7 +299,7 @@
             "type": "Search Algorithm",
             "levelInt": 2,
             "typeInt": 3,
-            "related": ["2", "3"],
+            "related": ["Short Title 2", "Example Tutorial Title 3"],
             "body": [
                 {
                    "position": 0,
@@ -296,7 +314,7 @@
             "type": "Sorting Algorithm",
             "levelInt": 3,
             "typeInt": 4,
-            "related": ["1"],
+            "related": ["Example Tutorial Title 1"],
             "body": [
                 {
                    "position": 0,
@@ -311,7 +329,7 @@
             "type": "Coding Concept",
             "levelInt": 3,
             "typeInt": 1,
-            "related": ["1", "4", "5", "6"],
+            "related": ["Example Tutorial Title 1", "Example Title 4", "Tutorial Title 5", "Example Tutorial Data 6"],
             "body": [
                 {
                    "position": 0,
@@ -326,7 +344,7 @@
             "type": "Coding Concept",
             "levelInt": 3,
             "typeInt": 1,
-            "related": ["1", "4", "5", "6"],
+            "related": [],
             "body": [
                 {
                    "position": 0,
@@ -341,7 +359,7 @@
             "type": "Coding Concept",
             "levelInt": 3,
             "typeInt": 1,
-            "related": ["1", "4", "5", "6"],
+            "related": [],
             "body": [
                 {
                    "position": 0,
@@ -356,7 +374,7 @@
             "type": "Coding Concept",
             "levelInt": 3,
             "typeInt": 1,
-            "related": ["1", "4", "5", "6"],
+            "related": ["Example Tutorial Title 1", "Example Title 4", "Tutorial Title 5", "Example Tutorial Data 6"],
             "body": [
                 {
                    "position": 0,
@@ -371,7 +389,7 @@
             "type": "Coding Concept",
             "levelInt": 3,
             "typeInt": 1,
-            "related": ["1", "4", "5", "6"],
+            "related": ["Example Tutorial Title 1", "Example Title 4", "Tutorial Title 5", "Example Tutorial Data 6"],
             "body": [
                 {
                    "position": 0,
