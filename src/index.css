@@ -2,7 +2,9 @@
 
 
 :root{
-    --bg-color: white
+    --bg-color: white;
+    --site-primary: rgb(120, 68, 241);
+    --site-highlight: rgb(103, 220, 220);
 }
 
 * {
@@ -83,7 +85,22 @@ input[type="checkbox"]+label{
 .p-editor-input{
   font-size: 1em;
 }
-
+.tutorial__title h1{
+  font-size: 2em;
+}
+.tutorial__title p,
+.tut-category p{
+  color: #222;
+  font-size: .825em;
+}
+.sidebar__checklist__category__link--unresponsive,
+.sidebar__checklist__category__link,
+.tutorial__body__related-title{
+  font-weight: 600;
+}
+.sidebar__checklist__category__link--unresponsive{
+  color: grey;
+}
 
  /* ==========
 
@@ -96,7 +113,7 @@ input[type="checkbox"]+label{
 }
 .banner{
   height: 10vh;
-  background-color: rgb(120, 68, 241);
+  background-color: var(--site-primary);
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -125,6 +142,7 @@ input[type="checkbox"]+label{
   display: grid;
   grid-template-areas: "s m";
   grid-template-columns: 25% 65%;
+  border-inline: 4px solid var(--site-primary);
 
 }
 .main-content-panel__main{
@@ -147,10 +165,10 @@ input[type="checkbox"]+label{
   align-items: center;
   gap: 1rem;
   padding-inline: auto 1rem;
-  width: 25%;
   justify-content: center;
   position: fixed;
   align-self: start;
+  margin-inline-start: 2rem;
 }
 .sidebar--short{
   margin-block-start: 3rem;
@@ -160,7 +178,7 @@ input[type="checkbox"]+label{
   display: flex;
   justify-content: center;
   align-items: start;
-  border-block: 8px solid rgb(120, 68, 241);
+  border-block: 8px solid var(--site-primary);
   border-radius: 8px;
   border-inline: 2px solid gray;
   max-height: 70vh;
@@ -185,7 +203,7 @@ input[type="checkbox"]+label{
 .wrapper--tut-category::after{
     height: 4px;
     width: 100%;
-    background-color: rgb(103, 220, 220);
+    background-color: var(--site-highlight);
     border-radius: 0 0 4px 4px;
     content: "";
     position: absolute;
@@ -256,11 +274,11 @@ input[type="checkbox"]+label{
   width: 100%;
   padding-inline-end: 2rem;
   padding: 1rem;
-  background-color: rgb(120, 68, 241);
+  background-color: var(--site-primary);
   z-index: 2;
   border-radius: 5px 5px 0 0;
   position: relative;
-  border-bottom: 8px solid rgb(166, 134, 241);
+  border-bottom: 9px solid rgb(166, 134, 241);
 }
 .main-content-panel__graph-wrapper::before,
 .gif-wrapper::before{
@@ -273,7 +291,7 @@ input[type="checkbox"]+label{
 .gif-wrapper::after{
     height: 8px;
     width: 100%;
-    background-color: rgb(103, 220, 220);
+    background-color: var(--site-highlight);
     border-radius: 0 0 16px 16px;
     content: "";
     position: absolute;
@@ -486,7 +504,7 @@ input[type="checkbox"]+label{
    justify-content: space-around;
  }
  .wrapper--tut-category{
-  background-color: rgb(120, 68, 241);
+  background-color: var(--site-primary);
   border-bottom-width: 9px;
   width: 80%;
   display: flex;
@@ -503,6 +521,126 @@ input[type="checkbox"]+label{
   padding: .5rem
 }
 
+
+/* ==========
+
+ individual tutorial page
+
+ ========== */
+ /* ======Article====== */
+ .tutorial{
+   gap: 0;
+ }
+ .tutorial__title,
+ .tutorial__body{
+  border-block-end: 2px solid black;
+}
+.tutorial__title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-block-end: .5rem;
+}
+.tutorial__body{
+  padding-block-end: 1.5rem;
+}
+.wrapper--tutorial__title__heading{
+  position: relative;
+}
+.wrapper--tutorial__title__heading::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 8rem;
+  height: 1.5rem;
+  border-block-start: 4px solid var(--site-highlight);
+  border-inline-start: 4px solid var(--site-highlight);
+}
+.wrapper--tutorial__title__heading::after{
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -15px;
+  width: 7rem;
+  height: 1rem;
+  border-block-start: 4px solid var(--site-primary);
+  border-inline-start: 4px solid var(--site-primary);
+}
+.tutorial__title__heading{
+  position: relative;
+  z-index: 2;
+}
+.wrapper--tutorial__title__categories{
+  position: relative;
+}
+/* .wrapper--tutorial__title__categories::before{
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  width: 4rem;
+  height: 1.5rem;
+  border-block-start: 4px solid var(--site-highlight);
+  border-inline-end: 4px solid var(--site-highlight);
+} */
+.tutorial__h2,
+.tutorial__p,
+.tutorial__image--S,
+.tutorial__image--M,
+.tutorial__image--L{
+  margin-block-start: 1rem;
+}
+.tutorial__h2{
+  margin-block-start: 1rem;
+  position: relative;
+}
+.tutorial__h2::before{
+  content: '';
+  position: absolute;
+  left: -10px;
+  width: 4px;
+  height: 2rem;
+  background-color: var(--site-highlight);
+}
+.tutorial__code{
+  padding-inline: .5rem;
+  width: fit-content;
+  background-color: var(--site-highlight);
+  white-space: pre-wrap
+}
+.tutorial__image--S{
+  max-width: 25%;
+}
+.tutorial__image--M{
+  max-width: 40%;
+}
+.tutorial__image--L{
+  max-width: 80%;
+}
+.tutorial__related{
+  padding-block: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+/* ======Sidebar====== */
+.sidebar__checklist__title--margin{
+  margin-inline-start: .5rem;
+}
+.sidebar__checklist__category__link,
+.tutorial__body__related-title{
+  cursor: pointer;
+}
+.sidebar__checklist__category__link--unresponsive,
+.sidebar__checklist__category__link{
+  max-width: 20ch;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
 
 /* ==========
 

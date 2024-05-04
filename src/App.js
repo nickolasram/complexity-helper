@@ -5,6 +5,7 @@ import Exercises from './pages/Exercises';
 import FlashcardCategories from './pages/Categories';
 import FlashcardPage from './pages/FlashcardPage';
 import TutorialHub from './pages/Tutorials'
+import Tutorial from './pages/Tutorial';
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
             <Route path='/Home' element={<Main />} />
             <Route path='/Exercises' element={<Exercises />} />
             <Route path='/Flashcards' element={<FlashcardCategories />} />
-            <Route path='/FlashcardPage/:category' element={<FlashcardPage />} />
+            <Route path='/Flashcards/:category' element={<FlashcardPage />} />
             <Route path='/Tutorial' element={<TutorialHub />} />
+            <Route path='/Tutorial/:title' element={<Tutorial />} />
         </Routes>
     </Router>
   );

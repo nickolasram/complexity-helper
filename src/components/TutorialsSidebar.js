@@ -10,10 +10,10 @@ const TutorialsSidebar =({handleCheck})=>{
     const [typeChecked, setTypeChecked] = useState([]);
 
     const handleSelect=(value, arrayNo)=>{
-        if (arrayNo == 1){
+        if (arrayNo === 1){
             if (levelChecked.includes(value)){
-                handleCheck(levelChecked.filter(i => i != value), typeChecked)
-                setLevelChecked(levelChecked.filter(i => i != value))
+                handleCheck(levelChecked.filter(i => i !== value), typeChecked)
+                setLevelChecked(levelChecked.filter(i => i !== value))
             } 
             else {
                 handleCheck([...levelChecked, value], typeChecked)
@@ -22,8 +22,8 @@ const TutorialsSidebar =({handleCheck})=>{
         }
         else {
             if (typeChecked.includes(value)){
-                handleCheck(levelChecked, typeChecked.filter(i => i != value))
-                setTypeChecked(typeChecked.filter(i => i != value))
+                handleCheck(levelChecked, typeChecked.filter(i => i !== value))
+                setTypeChecked(typeChecked.filter(i => i !== value))
             } 
             else {
                 handleCheck(levelChecked, [...typeChecked, value])
