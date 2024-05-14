@@ -198,8 +198,6 @@
              "title": "Short Title 2",
              "level": "Introductory",
              "type": "Data Struture",
-             "levelInt": 0,
-             "typeInt": 2,
              "related": ["Example Tutorial Title 1"],
              "body": [
                  {
@@ -245,8 +243,6 @@
             "title": "Example Tutorial Title 3",
             "level": "Novice",
             "type": "Sorting Algorithm",
-            "levelInt": 1,
-            "typeInt": 4,
             "related": ["Example Tutorial Title 1", "Example Title 4"],
             "body": [
                 {
@@ -282,8 +278,6 @@
             "title": "Example Title 4",
             "level": "Novice",
             "type": "Search Algorithm",
-            "levelInt": 1,
-            "typeInt": 3,
             "related": ["Example Tutorial Title 1", "Example Tutorial Title 3"],
             "body": [
                 {
@@ -297,8 +291,6 @@
             "title": "Tutorial Title 5",
             "level": "Intermediate",
             "type": "Search Algorithm",
-            "levelInt": 2,
-            "typeInt": 3,
             "related": ["Short Title 2", "Example Tutorial Title 3"],
             "body": [
                 {
@@ -312,8 +304,6 @@
             "title": "Example Tutorial Data 6",
             "level": "Advanced",
             "type": "Sorting Algorithm",
-            "levelInt": 3,
-            "typeInt": 4,
             "related": ["Example Tutorial Title 1"],
             "body": [
                 {
@@ -327,8 +317,6 @@
             "title": "Example Tutorial Data 7",
             "level": "Advanced",
             "type": "Coding Concept",
-            "levelInt": 3,
-            "typeInt": 1,
             "related": ["Example Tutorial Title 1", "Example Title 4", "Tutorial Title 5", "Example Tutorial Data 6"],
             "body": [
                 {
@@ -342,8 +330,6 @@
             "title": "Example Tutorial Data 8",
             "level": "Advanced",
             "type": "Coding Concept",
-            "levelInt": 3,
-            "typeInt": 1,
             "related": [],
             "body": [
                 {
@@ -357,8 +343,6 @@
             "title": "Example Tutorial Data 9",
             "level": "Advanced",
             "type": "Coding Concept",
-            "levelInt": 3,
-            "typeInt": 1,
             "related": [],
             "body": [
                 {
@@ -372,8 +356,6 @@
             "title": "Example Tutorial Data 10",
             "level": "Advanced",
             "type": "Coding Concept",
-            "levelInt": 3,
-            "typeInt": 1,
             "related": ["Example Tutorial Title 1", "Example Title 4", "Tutorial Title 5", "Example Tutorial Data 6"],
             "body": [
                 {
@@ -387,8 +369,6 @@
             "title": "Example Tutorial Data 11",
             "level": "Advanced",
             "type": "Coding Concept",
-            "levelInt": 3,
-            "typeInt": 1,
             "related": ["Example Tutorial Title 1", "Example Title 4", "Tutorial Title 5", "Example Tutorial Data 6"],
             "body": [
                 {
@@ -402,5 +382,42 @@
     "filteringOptions": {
         "levels" : ["Introductory", "Novice", "Intermediate", "Advanced"],
         "types": ["Math Concept", "Coding Concept", "Data Struture", "Search Algorithm", "Sorting Algorithm"]
-    }
+    },
+    "exercises": [
+        {
+            "type": "Complete the Code",
+            "level": "Introductory",
+            "category": "category 1",
+            "question": "This could be an n>    example of code that n>        has a _> word n>   and the answer n>is 'missing'",
+            "answers":["missing"]
+        },
+        {
+            "type": "Complete the Code",
+            "level": "Introductory",
+            "category": "category 1",
+            "question": "This could be an n>    example of _> that n>        has a _> word n>   and the answers n>are 'code' and 'missing'",
+            "answers":["code", "missing"]
+        },
+        {
+            "type": "Complete the Code",
+            "level": "Introductory",
+            "category": "category 1",
+            "question": "This2 could2 be2 an2 n>    example2 of2 _> that2 n>        has2 a2 _> word2 n>   and2 the2 answers2 n>are2 'code2' and2 'missing2'",
+            "answers":["code2", "missing2"]
+        },
+        {
+            "type": "Complete the Code",
+            "level": "Introductory",
+            "category": "category 2",
+            "question": "This3 could3 be3 an3 n>    example3 of3 code3 that3 n>        has3 a3 _> word3 n>   and3 the3 answers3 n>are3 'missing3'",
+            "answers":"missing3"
+        },
+        {
+            "type": "Complete the Code",
+            "level": "Novice",
+            "category": "category 1",
+            "question": "This2 could2 be2 an2 n>    example2 of2 _> that2 n>        has2 a2 _> word2 n>   and2 the2 answers2 n>are2 'code2' and2 'missing2'",
+            "answers":["code2", "missing2"]
+        }
+    ]
 }
