@@ -389,35 +389,54 @@
             "level": "Introductory",
             "category": "category 1",
             "question": "This could be an n>    example of code that n>        has a _> word n>   and the answer n>is 'missing'",
-            "answers":["missing"]
+            "answers":["missing"],
+            "status": "",
+            "prompt": "Theres is an empty input field. Fill it in with 'missing' and click submit."
         },
         {
             "type": "Complete the Code",
             "level": "Introductory",
             "category": "category 1",
             "question": "This could be an n>    example of _> that n>        has a _> word n>   and the answers n>are 'code' and 'missing'",
-            "answers":["code", "missing"]
+            "answers":["code", "missing"],
+            "status": "",
+            "prompt": "type in missing"
         },
         {
             "type": "Complete the Code",
             "level": "Introductory",
             "category": "category 1",
             "question": "This2 could2 be2 an2 n>    example2 of2 _> that2 n>        has2 a2 _> word2 n>   and2 the2 answers2 n>are2 'code2' and2 'missing2'",
-            "answers":["code2", "missing2"]
+            "answers":["code2", "missing2"],
+            "status": "",
+            "prompt": "type in missing"
         },
         {
             "type": "Complete the Code",
             "level": "Introductory",
             "category": "category 2",
             "question": "This3 could3 be3 an3 n>    example3 of3 code3 that3 n>        has3 a3 _> word3 n>   and3 the3 answers3 n>are3 'missing3'",
-            "answers":"missing3"
+            "answers":"missing3",
+            "status": ""
         },
         {
             "type": "Complete the Code",
             "level": "Novice",
             "category": "category 1",
             "question": "This2 could2 be2 an2 n>    example2 of2 _> that2 n>        has2 a2 _> word2 n>   and2 the2 answers2 n>are2 'code2' and2 'missing2'",
-            "answers":["code2", "missing2"]
+            "answers":["code2", "missing2"],
+            "status": ""
         }
-    ]
+    ],
+    "exerciseOptions": {
+        "difficulty": [
+            "Introductory", "Novice"
+        ],
+        "category": [
+            "category 1", "category 2"
+        ],
+        "type": [
+            "Complete the Code", "Don't select this"
+        ]
+    }
 }
