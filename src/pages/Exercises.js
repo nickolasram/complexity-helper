@@ -1,21 +1,14 @@
 import data from '../source.json'
 import Header from '../components/Header';
+import ExercisesHubPanel from '../components/ExercisesPanel';
 
-let complexities = data.complexitiesO
-
-complexities.sort((a,b)=>b.rank-a.rank)
+let exercises = data.exercises
 
 let Exercises =()=> {
     return (
         <div id="wrapper">
             <Header />
-            <div className='exercise-stack'>
-                {complexities.map((complexity, index)=>(
-                    <section>
-                        <ul>{complexity.symbol}</ul>
-                    </section>
-                ))}
-            </div>
+            <ExercisesHubPanel question={exercises[0]}/>
         </div>
     );
 }
