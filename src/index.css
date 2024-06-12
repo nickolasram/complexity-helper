@@ -36,7 +36,8 @@ input[type="checkbox"]+label{
 }
 .complexity-symbol,
 .ex-submit__btn:hover,
-.ex-submit__btn:focus{
+.ex-submit__btn:focus,
+.asdf{
   font-weight: bold;
 }
 .fccategory__title,
@@ -88,7 +89,8 @@ input[type="checkbox"]+label{
 .p-editor-input{
   font-size: 1em;
 }
-.tutorial__title h1{
+.tutorial__title h1,
+.asdf{
   font-size: 2em;
 }
 .tutorial__title p,
@@ -105,6 +107,13 @@ input[type="checkbox"]+label{
 }
 .sidebar__checklist__category__link--unresponsive{
   color: grey;
+}
+.hint-section__reveal{
+  color: gray;
+  text-decoration: underline;
+}
+.hint-section{
+  font-size: .825rem;
 }
 
  /* ==========
@@ -684,23 +693,35 @@ input[type="checkbox"]+label{
 .main-content-panel__main--ex-grid{
   display: grid;
   grid-template-areas: 
-    ". . info"
+    "info info info"
     "back ex next"
-    "submit submit submit";
-    gap: 3rem;
-    grid-template-columns: 10% auto 15%;
+    ". submit .";
+    gap: 1rem;
+    grid-template-columns: min-content 75% 15%;
     grid-template-rows: min-content minmax(35vh, max-content) min-content;
+  width: 100%;
+  max-width: 1500px;
 }
 .question-div{
   border: 2px solid gray;
   border-radius: 8px;
-  gap: .35rem;
   grid-area: ex;
-  align-items: center;
+  width: 100%;
+  height: 100%;
   align-self: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+}
+.question-div__question{
+  /* border: 2px solid gray;
+  border-radius: 8px; */
+  gap: .35rem;
+  width: 100%;
 }
 .question-div__prompt{
   padding: .5rem;
+  flex-basis: 0;
 }
 .grid-back,
 .grid-next{
@@ -714,18 +735,33 @@ input[type="checkbox"]+label{
 }
 .ex-info{
   grid-area: info;
+  border-block-end: 2px solid black;
+  padding-block-end: .75rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .ex-submit{
   grid-area: submit;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.feedback-section{
+  flex-grow: 1;
+  /* background-color: aquamarine; */
 }
 .ex-submit__btn{
   background-color: var(--site-primary);
   padding-block: 1rem;
   padding-inline: 1.5rem;
-  border: 1px black black;
+  border: 2px solid black;
   width: fit-content;
   transition: background-color .5s;
   border-radius: 1rem;
+  grid-area: submit;
+  flex-grow: 0;
 }
 .ex-submit__btn:hover,
 .ex-submit__btn:focus{
@@ -733,11 +769,27 @@ input[type="checkbox"]+label{
   cursor: pointer;
 }
 .exercise__code{
-  padding-inline: .5rem;
+  padding: 1rem;
   width: 100%;
   background-color: var(--site-highlight);
-  white-space: pre-wrap
+  white-space: pre-wrap;
+  flex-basis: 100%;
 }
+.hint-section{
+  flex-basis: 0;
+  padding: .5rem;
+}
+.hint-section__reveal:hover,
+.hint-section__reveal:focus{
+  cursor: pointer;
+}
+.feedback-section--correct{
+  color: green;
+}
+.feedback-section--incorrect{
+  color: red;
+}
+
 
 /* ==========
 

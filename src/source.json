@@ -391,7 +391,8 @@
             "question": "This could be an n>    example of code that n>        has a _> word n>   and the answer n>is 'missing'",
             "answers":["missing"],
             "status": "",
-            "prompt": "Theres is an empty input field. Fill it in with 'missing' and click submit."
+            "prompt": "Theres is an empty input field. Fill it in with 'missing' and click submit.",
+            "hint": "69 lol"
         },
         {
             "type": "Complete the Code",
@@ -416,7 +417,7 @@
             "level": "Introductory",
             "category": "category 2",
             "question": "This3 could3 be3 an3 n>    example3 of3 code3 that3 n>        has3 a3 _> word3 n>   and3 the3 answers3 n>are3 'missing3'",
-            "answers":"missing3",
+            "answers":["missing3"],
             "status": ""
         },
         {
