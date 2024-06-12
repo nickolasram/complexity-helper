@@ -109,7 +109,13 @@
 
         ],
     "review-questions": {
-        "basics": [],
+        "basics": [
+            {
+            "question": "This should be an example of a __ type flashcard.",
+            "answer": "Basic",
+            "context": ""
+            }
+        ],
         "data structures": [
             {
                 "image": "minheap1.png",
@@ -134,7 +140,13 @@
                 "context": "Both maintain two sublists and then check the unsorted list for next sorted element."
             }
         ],
-        "complexities": []
+        "complexities": [
+            {
+                "question": "This should be an example of a __ type flashcard.",
+                "answer": "Complexities",
+                "context": ""
+            }
+        ]
     },
     "tutorials": [
         {
@@ -391,7 +403,8 @@
             "question": "This could be an n>    example of code that n>        has a _> word n>   and the answer n>is 'missing'",
             "answers":["missing"],
             "status": "",
-            "prompt": "Theres is an empty input field. Fill it in with 'missing' and click submit."
+            "prompt": "Theres is an empty input field. Fill it in with 'missing' and click submit.",
+            "hint": "69 lol"
         },
         {
             "type": "Complete the Code",
@@ -416,7 +429,7 @@
             "level": "Introductory",
             "category": "category 2",
             "question": "This3 could3 be3 an3 n>    example3 of3 code3 that3 n>        has3 a3 _> word3 n>   and3 the3 answers3 n>are3 'missing3'",
-            "answers":"missing3",
+            "answers":["missing3"],
             "status": ""
         },
         {
@@ -426,6 +439,35 @@
             "question": "This2 could2 be2 an2 n>    example2 of2 _> that2 n>        has2 a2 _> word2 n>   and2 the2 answers2 n>are2 'code2' and2 'missing2'",
             "answers":["code2", "missing2"],
             "status": ""
+        },
+        {
+            "type": "Multiple Choice",
+            "level": "Novice",
+            "category": "category 1",
+            "question": "This2 could2 be2 an2 n>    example2 of2 code2 that2 n>        does not have2 a2 _> missing2 word2 n>   and2 the2 answers2 n>are2 'code2' and2 'missing2'",
+            "answers":["a1", "b2", "sssss sssssssssssssssssssssssssssssssssssssssss", "d4"],
+            "correct": "a1",
+            "status": "",
+            "prompt": "Select a1"
+        },
+        {
+            "type": "Short Answer",
+            "level": "Novice",
+            "category": "category 1",
+            "prompt": "What is 2 x 2 ?",
+            "correct": "4",
+            "status": "",
+            "hint": "4",
+            "answers": ""
+        },
+        {
+            "type": "Short Answer",
+            "level": "Novice",
+            "category": "category 1",
+            "prompt": "What is 2 x 2 ?",
+            "correct": "4",
+            "status": "",
+            "answers": ""
         }
     ],
     "exerciseOptions": {
@@ -436,7 +478,7 @@
             "category 1", "category 2"
         ],
         "type": [
-            "Complete the Code", "Don't select this"
+            "Complete the Code", "Multiple Choice", "Short Answer"
         ]
     }
 }

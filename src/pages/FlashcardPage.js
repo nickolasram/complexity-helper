@@ -61,6 +61,7 @@ let FlashcardPage =()=>{
         <div id="wrapper">
             <Header />
             <div className="main-content-panel">
+                <div></div>
                 <div className="flashcards">
                     <div className='flashcards__submenu'>
                         <p onClick={handleOnClick}><span className="inline-icon">&#8617; </span> Go Back</p>
