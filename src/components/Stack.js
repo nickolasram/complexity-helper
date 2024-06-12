@@ -3,6 +3,8 @@ import data from '../source.json'
 
 let complexities = data.complexitiesO
 
+complexities.sort((a, b) => b.rank - a.rank);
+
 let Stack =props=> {
     return (
         <div className='stack'>

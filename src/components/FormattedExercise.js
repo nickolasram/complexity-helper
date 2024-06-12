@@ -7,7 +7,6 @@ const FormattedExercise=({givenText, placeholders})=>{
         if(givenLine.includes("_>")){
             inputIndex.current = inputIndex.current + 1;
             givenLine = givenLine.split("_>")
-            console.log(placeholders)
             return (
                 <p>
                     <code>{givenLine[0]}</code>

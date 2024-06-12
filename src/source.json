@@ -109,7 +109,13 @@
 
         ],
     "review-questions": {
-        "basics": [],
+        "basics": [
+            {
+            "question": "This should be an example of a __ type flashcard.",
+            "answer": "Basic",
+            "context": ""
+            }
+        ],
         "data structures": [
             {
                 "image": "minheap1.png",
@@ -134,7 +140,13 @@
                 "context": "Both maintain two sublists and then check the unsorted list for next sorted element."
             }
         ],
-        "complexities": []
+        "complexities": [
+            {
+                "question": "This should be an example of a __ type flashcard.",
+                "answer": "Complexities",
+                "context": ""
+            }
+        ]
     },
     "tutorials": [
         {
@@ -427,6 +439,35 @@
             "question": "This2 could2 be2 an2 n>    example2 of2 _> that2 n>        has2 a2 _> word2 n>   and2 the2 answers2 n>are2 'code2' and2 'missing2'",
             "answers":["code2", "missing2"],
             "status": ""
+        },
+        {
+            "type": "Multiple Choice",
+            "level": "Novice",
+            "category": "category 1",
+            "question": "This2 could2 be2 an2 n>    example2 of2 code2 that2 n>        does not have2 a2 _> missing2 word2 n>   and2 the2 answers2 n>are2 'code2' and2 'missing2'",
+            "answers":["a1", "b2", "sssss sssssssssssssssssssssssssssssssssssssssss", "d4"],
+            "correct": "a1",
+            "status": "",
+            "prompt": "Select a1"
+        },
+        {
+            "type": "Short Answer",
+            "level": "Novice",
+            "category": "category 1",
+            "prompt": "What is 2 x 2 ?",
+            "correct": "4",
+            "status": "",
+            "hint": "4",
+            "answers": ""
+        },
+        {
+            "type": "Short Answer",
+            "level": "Novice",
+            "category": "category 1",
+            "prompt": "What is 2 x 2 ?",
+            "correct": "4",
+            "status": "",
+            "answers": ""
         }
     ],
     "exerciseOptions": {
@@ -437,7 +478,7 @@
             "category 1", "category 2"
         ],
         "type": [
-            "Complete the Code", "Don't select this"
+            "Complete the Code", "Multiple Choice", "Short Answer"
         ]
     }
 }
