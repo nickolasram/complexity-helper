@@ -62,7 +62,6 @@ let FlashcardPage =()=>{
             <Header />
             <div className="main-content-panel">
                 <div>
-                    <img src='https://complexity-helper-first.s3.us-west-1.amazonaws.com/1.png'/>
                 </div>
                 <div className="flashcards">
                     <div className='flashcards__submenu'>
