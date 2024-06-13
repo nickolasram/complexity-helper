@@ -6,15 +6,15 @@
                 "examples":
                     [
                         {"name": "Mergesort",
-                        "gif": "merge.gif"},
+                        "gif": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/merge.gif"},
                         {"name": "Timsort",
-                        "gif": "placeholderRectangle.png"},
+                        "gif": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/placeholderRectangle.png"},
                         {"name": "Heapsort",
-                        "gif": "heap.gif"},
+                        "gif": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/heap.gif"},
                         {"name": "Quicksort",
-                        "gif": "quick.gif"}
+                        "gif": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/quick.gif"}
                     ],
-                "image": "NlogN.png",
+                "image": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/NlogN.png",
                 "description": "NLOGN Description goes here",
                 "rank": 6
             },
@@ -23,18 +23,18 @@
                 "examples":
                     [
                         {"name": "Bubble sort",
-                         "gif": "bubble.gif",
+                         "gif": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/bubble.gif",
                          "description": "The simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order. This algorithm is not suitable for large data sets as its average and worst-case time complexity is quite high."},
                          {"name": "Insertion sort",
-                         "gif": "insertion.gif"},
+                         "gif": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/insertion.gif"},
                         {"name": "Selection sort",
-                         "gif": "selection.gif"},
+                         "gif": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/selection.gif"},
                         {"name": "Tree sort",
-                         "gif": "tree.gif"},
+                         "gif": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/tree.gif"},
                         {"name": "Bucket Sort",
-                         "gif": "bucket.gif"}
+                         "gif": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/bucket.gif"}
                     ],
-                "image": "N2.png",
+                "image": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/N2.png",
                 "description": "Quadratic time complexity. Often reflects the fact that the algorithm processes all (or a substantial number of) pairs of elements in a given input set. In the code it usually looks like a for loop embedded inside of another for loop. The examples are basic sorting algorithms like bubble, insertion or selection sort.",
                 "resources": [],
                 "rank": 8
@@ -44,9 +44,9 @@
                 "examples": 
                     [
                         {"name": "Shell sort",
-                        "gif": "shell.gif"}
+                        "gif": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/shell.gif"}
                     ],
-                "image": "NlogN2.png",
+                "image": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/NlogN2.png",
                 "description": "NLOGN2 Description goes here",
                 "rank": 7
             },
@@ -54,10 +54,10 @@
             "examples": 
                 [
                     {"name": "Radix sort",
-                     "gif": "radix.gif",
+                     "gif": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/radix.gif",
                      "description": "Radix Sort is a linear sorting algorithm. Radix Sort's time complexity of O(nd), where n is the size of the array and d is the number of digits in the largest number. It is not an in-place sorting algorithm because it requires extra space. The time complexity of radix sort is O(n) because each digit is sorted independently. Some consider Radix sort to have a time complexity of O(N)."}
                 ],
-                "image": "NK.png",
+                "image": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/NK.png",
                 "description": "NK Description goes here",
                  "rank": 5},
             {
@@ -65,23 +65,23 @@
                 "examples": 
                     [
                         {"name": "Counting sort",
-                        "gif": "counting.gif"}
+                        "gif": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/counting.gif"}
                     ],
-                "image": "NplusK.png",
+                "image": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/NplusK.png",
                 "description": "N+K Description goes here",
                 "rank": 4},
             {
                 "symbol": "O(N)",
                 "examples": 
                     [],
-                "image": "N.png",
+                "image": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/N.png",
                 "description": "As N increases, so does the amount of operations needed to complete the problem. This is simple to understand because it’s an entirely linear relationship.",
                 "rank": 3},
             {
                 "symbol": "O(1)",
                 "examples": 
                     [],
-                "image": "1.png",
+                "image": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/1.png",
                 "description": "Constant time",
                 "rank": 1
             },
@@ -89,7 +89,7 @@
                 "symbol": "O(2^N)",
                 "examples": 
                     [],
-                "image": "2N.png",
+                "image": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/2N.png",
                 "description": "Worst time",
                 "rank": 9
             },
@@ -99,10 +99,10 @@
                     [
                         {
                             "name": "binary search",
-                            "gif": "binary.gif"
+                            "gif": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/binary.gif"
                         }
                     ],
-                "image": "logN.png",
+                "image": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/logN.png",
                 "description": "Good time",
                 "rank": 2
             }
@@ -118,7 +118,7 @@
         ],
         "data structures": [
             {
-                "image": "minheap1.png",
+                "image": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/minheap1.png",
                 "question": "The following is a valid binary min heap. (T/F)",
                 "answer": "True",
                 "context": "In a Min Binary Heap, the key at the root must be minimum among all keys present in Binary Heap. The same property must be recursively true for all nodes in Binary Tree."
@@ -173,7 +173,7 @@
                 {
                     "position": 3,
                     "type": "imageS",
-                    "content": "exampleDataImage1.jpg",
+                    "content": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/exampleDataImage1.jpg",
                     "note": "This is a note about the first image",
                     "desc": "description of image for accessibility"
                 },
@@ -190,7 +190,7 @@
                 {
                     "position": 6,
                     "type": "imageL",
-                    "content": "exampleDataImage2.jpg",
+                    "content": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/exampleDataImage2.jpg",
                     "note": "This is a note about the second image",
                     "desc": "description of image for accessibility"
                 },
@@ -230,7 +230,7 @@
                 {
                     "position": 3,
                     "type": "imageM",
-                    "content": "exampleDataImage3.jpg",
+                    "content": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/exampleDataImage3.jpg",
                     "note": "This is a note about the first image",
                     "desc": "description of image for accessibility"
                 },
@@ -275,7 +275,7 @@
                {
                    "position": 4,
                    "type": "imageM",
-                   "content": "exampleDataImage2.jpg",
+                   "content": "https://complexity-helper-first.s3.us-west-1.amazonaws.com/exampleDataImage2.jpg",
                    "note": "This is a note about the first image",
                    "desc": "description of image for accessibility"
                },
