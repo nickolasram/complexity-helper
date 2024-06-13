@@ -7,7 +7,9 @@ let Flashcard = ({question, answer, context, image}) =>{
             <div className={"flashcard__inner " + flip}>
                 <div className="flashcard__front">
                     <p>{question}</p>
-                    <img src={image && require('../images/'+image)} />
+                    {
+                        img && <img src={image} />
+                    }
                 </div>
                 <div className="flashcard__back">
                     <p>{answer}</p>

@@ -1,14 +1,12 @@
-import empty from '../images/empty.png';
-
 let Graph = props => {
     if (props.selections == 0) {
-        return <section className='graph-space'><img src={empty}/></section>
+        return <section className='graph-space'><img src="https://complexity-helper-first.s3.us-west-1.amazonaws.com/empty.png"/></section>
     }
     return(
         <section className='graph-space'>
             {props.selections.map((selection,index)=>
                 (
-                    <img src={require('../images/'+selection.image)}/>
+                    <img src={selection.image}/>
                 )
             )}
         </section>
