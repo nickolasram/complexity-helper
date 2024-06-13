@@ -17,11 +17,11 @@ const renderSegment=segment=>{
         case "code":
             return <FormattedCode givenText={content} />
         case "imageS":
-            return <img src={require('../images/'+content)} className='tutorial__image--S'/>
+            return <img src={content} className='tutorial__image--S'/>
         case "imageM":
-            return <img src={require('../images/'+content)} className='tutorial__image--M'/>
+            return <img src={content} className='tutorial__image--M'/>
         case "imageL":
-            return <img src={require('../images/'+content)} className='tutorial__image--L'/>
+            return <img src={content} className='tutorial__image--L'/>
         default:
             return <p><b>{content}</b></p>
     }
