@@ -8,7 +8,7 @@ let Flashcard = ({question, answer, context, image}) =>{
                 <div className="flashcard__front">
                     <p>{question}</p>
                     {
-                        img && <img src={image} />
+                        image && <img src={image} />
                     }
                 </div>
                 <div className="flashcard__back">
