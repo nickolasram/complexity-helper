@@ -404,7 +404,7 @@
             "answers":["missing"],
             "status": "",
             "prompt": "Theres is an empty input field. Fill it in with 'missing' and click submit.",
-            "hint": "69 lol"
+            "hint": "answer missing"
         },
         {
             "type": "Complete the Code",
