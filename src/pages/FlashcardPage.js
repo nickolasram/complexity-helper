@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Flashcard from "../components/Flashcard";
 import data from '../source.json';
 
+
 let shuffle =(array)=> {
     let currentIndex = array.length,  randomIndex;
     while (currentIndex > 0) {
@@ -21,6 +22,7 @@ let FlashcardPage =()=>{
     const intialIndex = Math.floor(Math.random() * questions.length);
     const indexTracker = useRef(0);
     const [cardContent, setCardContent] = useState(questions[intialIndex]);
+    
 
     let scrollRight = () =>{
         let card = document.getElementsByClassName('flashcard')[0];
