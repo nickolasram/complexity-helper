@@ -6,23 +6,21 @@ import React, {useEffect, useState} from 'react';
 const TutorialHub= ()=>{
     const [as, setAs] = useState(null);
 
-    // const getEndpoint =()=>{
-    //     const endpoint = "https://7bjs6qawxb.execute-api.us-west-1.amazonaws.com/default/fetchComplexityHelperDB";
-    //     axios.get(endpoint)
-    //     .then(response => setAs(response.data.Items[0].complexity.S))
-    // }
+    const getEndpoint =()=>{
+        const endpoint = process.env.REACT_APP_ENDPOINT;
+        axios.get(endpoint)
+        .then(response => setAs(response.data.Items[0].complexity.S))
+    }
 
-    // useEffect(() => {
-    //     getEndpoint();
-    //   }, []);
+    useEffect(() => {
+        getEndpoint();
+      }, []);
 
-    const envtest = process.env.REACT_APP_ENDPOINT_TEST
     return(
         <div id="wrapper">
             <Header />
             <TutorialHubContentPanel />
-            {/* <p>{as}</p> */}
-            <p>{envtest}</p>
+            <p>{as}</p>
         </div>
     )
 }
