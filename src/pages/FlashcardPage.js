@@ -4,7 +4,6 @@ import Header from "../components/Header";
 import Flashcard from "../components/Flashcard";
 import data from '../source.json';
 
-import queryDDB from '../components/QueryDB';
 
 let shuffle =(array)=> {
     let currentIndex = array.length,  randomIndex;
@@ -23,6 +22,7 @@ let FlashcardPage =()=>{
     const intialIndex = Math.floor(Math.random() * questions.length);
     const indexTracker = useRef(0);
     const [cardContent, setCardContent] = useState(questions[intialIndex]);
+    
 
     let scrollRight = () =>{
         let card = document.getElementsByClassName('flashcard')[0];
@@ -58,8 +58,6 @@ let FlashcardPage =()=>{
         indexTracker.current = 0;
         setCardContent(questions[indexTracker.current])
     }
-
-    console.log(async()=> await queryDDB());
 
     return(
         <div id="wrapper">
