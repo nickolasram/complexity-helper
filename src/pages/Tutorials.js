@@ -8,8 +8,15 @@ const TutorialHub= ()=>{
 
     const getEndpoint =()=>{
         const endpoint = process.env.REACT_APP_ENDPOINT;
-        axios.get(endpoint)
-        .then(response => setAs(response.data.Items[0].complexity.S))
+        const headers = {
+              'tablename':'complexity-helper-complexities',
+              'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8',
+              'X-Api-Key': process.env.REACT_APP_API_KEY
+            }
+        axios.post(endpoint, {}, {
+            headers: headers
+          })
+        .then(response => setAs(response.data.Items))
     }
 
     useEffect(() => {
@@ -20,7 +27,7 @@ const TutorialHub= ()=>{
         <div id="wrapper">
             <Header />
             <TutorialHubContentPanel />
-            <p>{as}</p>
+            {as && <p onClick={()=>console.log(as)}>{as[0].symbol.S}</p>}
         </div>
     )
 }
