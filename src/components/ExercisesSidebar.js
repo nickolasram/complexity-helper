@@ -1,6 +1,6 @@
 import data from '../source.json';
 import ShuffleSVG from '../components/ShuffleSVG';
-import ResetSVG from './ResetSVG';
+// import ResetSVG from './ResetSVG';
 import PlaySVG from './PlaySVG';
 
 const difficulties = data.exerciseOptions.difficulty

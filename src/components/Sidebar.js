@@ -5,11 +5,11 @@ import tortoise from '../images/tortoise.svg';
 let Sidebar =props=>{
     return (
         <section className="sidebar">
-            <img src={tortoise} className='sidebar__speed-indicator'></img>
+            <img src={tortoise} className='sidebar__speed-indicator'  alt="PLACEHOLDER"></img>
             <section className='sidebar__checklist'>
                 <Stack onSelect={props.onSelect} onSelectAlg={props.onSelectAlg} />
             </section>
-            <img src={rabbit} className='sidebar__speed-indicator'></img>
+            <img src={rabbit} className='sidebar__speed-indicator'  alt="PLACEHOLDER"></img>
         </section>
     )
 }

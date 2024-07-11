@@ -1,11 +1,6 @@
 import React, {useState} from 'react';
-import data from '../source.json'
 
-const levels = data.filteringOptions.levels
-const types = data.filteringOptions.types
-
-
-const TutorialsSidebar =({handleCheck})=>{
+const TutorialsSidebar =({handleCheck, levels, types})=>{
     const [levelChecked, setLevelChecked] = useState([]);
     const [typeChecked, setTypeChecked] = useState([]);
 

@@ -21,7 +21,6 @@ const FormattedExercise=({givenText, placeholders})=>{
         }
     }
 
-    givenText = givenText
     let textArray = givenText.split("n>");
     return (
         <section className="exercise__code" onLoad={inputIndex.current = -1}>
