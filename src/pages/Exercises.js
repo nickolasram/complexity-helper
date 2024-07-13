@@ -34,7 +34,6 @@ let Exercises =()=> {
 
     useEffect(()=>{
         if (!localStorage.getItem("exerciseData")){
-            console.log("runnin")
             getData('exercise', setExerciseData);
             setLocalUpdated("positive");       
         } else {
