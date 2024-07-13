@@ -10,6 +10,7 @@ let MainContentPanel = () =>{
     const [selections, setSelections] = useState([])
     const [latestSelection, setLatest] = useState(null)
     const [selectedAlg, setSelectedAlg] = useState(null)
+    const [localUpdated, setLocalUpdated] = useState(null);
     const [complexities, setComplexities] = useState([{
         description: "",
         examples: [{ images: null,name: null}],
@@ -20,8 +21,20 @@ let MainContentPanel = () =>{
     let getComplexity = symbol => complexities.find(obj => {return obj.symbol === symbol} )
 
     useEffect(() => {
-        getData('complexity', setComplexities);
+        if (!localStorage.getItem('complexities')){
+            getData('complexity', setComplexities);
+            setLocalUpdated("positive");
+        } else {
+            setComplexities(JSON.parse(localStorage.getItem('complexities')))
+            setLocalUpdated("negative");
+        }
     }, []);
+
+    useEffect(()=>{
+        if (localUpdated === "positive"){
+            localStorage.setItem('complexities', JSON.stringify(complexities))
+        }
+    }, [localUpdated, complexities])
 
     let handleSelect = (selection, status) => {
         let checked = getComplexity(selection)
