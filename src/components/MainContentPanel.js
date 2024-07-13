@@ -1,18 +1,27 @@
-import React, {useState} from 'react'; 
+import React, {useState, useEffect} from 'react'; 
 import Graph from './Graph';
-import data from '../source.json';
 import CompDescription from './CompDescription';
 import NothingDescription from './NothingDescription';
 import AlgGif from './AlgGif';
 import Sidebar from './Sidebar';
-
-let complexities = data.complexitiesO
-let getComplexity = symbol => complexities.find(obj => {return obj.symbol == symbol} )
+import getData from '../components/functions/getData'
 
 let MainContentPanel = () =>{
     const [selections, setSelections] = useState([])
     const [latestSelection, setLatest] = useState(null)
     const [selectedAlg, setSelectedAlg] = useState(null)
+    const [complexities, setComplexities] = useState([{
+        description: "",
+        examples: [{ images: null,name: null}],
+        rank: 0,
+        symbol: ""
+    }]);
+
+    let getComplexity = symbol => complexities.find(obj => {return obj.symbol === symbol} )
+
+    useEffect(() => {
+        getData('complexity', setComplexities);
+    }, []);
 
     let handleSelect = (selection, status) => {
         let checked = getComplexity(selection)
@@ -20,9 +29,9 @@ let MainContentPanel = () =>{
             setLatest(checked)
             setSelections(selections.concat(checked))
         } else {
-            setSelections(selections.filter(obj => {return obj.symbol != selection}))
-            if (selection == latestSelection?.symbol){
-                if (latestSelection.examples.some(obj=>{return obj.name == selectedAlg?.name})){
+            setSelections(selections.filter(obj => {return obj.symbol !== selection}))
+            if (selection === latestSelection?.symbol){
+                if (latestSelection.examples.some(obj=>{return obj.name === selectedAlg?.name})){
                     setSelectedAlg(null)
                 }
                 setLatest(null)
@@ -31,7 +40,7 @@ let MainContentPanel = () =>{
     }
 
     let handleSelectAlg = selection => {
-        if (selection == selectedAlg) {
+        if (selection === selectedAlg) {
             setSelectedAlg(null)
         } else{
             setSelectedAlg(selection)
@@ -40,7 +49,7 @@ let MainContentPanel = () =>{
 
     return (
         <section className='main-content-panel'>
-            <Sidebar onSelect={handleSelect} onSelectAlg={handleSelectAlg}/>
+            <Sidebar onSelect={handleSelect} onSelectAlg={handleSelectAlg} complexities={complexities}/>
             <section className='main-content-panel__main'>
                 <section className='main-content-panel__graph-wrapper'>
                     <Graph selections={selections} />

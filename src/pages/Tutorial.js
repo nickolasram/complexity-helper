@@ -1,9 +1,9 @@
 import {useParams, useNavigate} from 'react-router-dom';
+import {useState, useEffect} from 'react';
 import Header from '../components/Header';
-import data from '../source.json';
 import FormattedCode from '../components/FormattedCode';
-
-const tutorials = data.tutorials
+import getData from '../components/functions/getData';
+import tutorialSort from '../components/functions/tutorialSort';
 
 const renderSegment=segment=>{
     let {type, content} = segment;
@@ -17,25 +17,57 @@ const renderSegment=segment=>{
         case "code":
             return <FormattedCode givenText={content} />
         case "imageS":
-            return <img src={content} className='tutorial__image--S'/>
+            return <img src={content} className='tutorial__image--S' alt="PLACEHOLDER"/>
         case "imageM":
-            return <img src={content} className='tutorial__image--M'/>
+            return <img src={content} className='tutorial__image--M' alt="PLACEHOLDER"/>
         case "imageL":
-            return <img src={content} className='tutorial__image--L'/>
+            return <img src={content} className='tutorial__image--L' alt="PLACEHOLDER"/>
         default:
             return <p><b>{content}</b></p>
     }
 
 }
 
+const sortingHelper =tutorialData=>{
+    let justTutData = tutorialData.filter(tutorial => tutorial.title);
+    let isolatedLevels = tutorialData.filter(tutorial => tutorial.filteringOptions)[0].filteringOptions.levels
+    let isolatedTypes = tutorialData.filter(tutorial => tutorial.filteringOptions)[0].filteringOptions.types
+    let sortedTutData = tutorialSort(justTutData, isolatedLevels, isolatedTypes);
+    return sortedTutData
+
+}
+
 const Tutorial=()=>{
+    const [tutorials, setTutorials] = useState([])
+    const [tutorialData, setTutorialData] = useState(null);
+    const [localUpdated, setLocalUpdated] = useState(null);
     const {title} = useParams();
     const navigate = useNavigate();
     const handleOnClick = title => navigate('/Tutorial/'+title);
+
+    useEffect(()=>{
+        if (!localStorage.getItem("tutorialData")){
+            getData('tutorial', setTutorialData)
+            setLocalUpdated("positive");       
+        } else {
+            let allTutData =JSON.parse(localStorage.getItem("tutorialData"));
+            let sortedTutData = sortingHelper(allTutData);
+            setTutorials(sortedTutData);
+        }
+    },[]);
+
+    useEffect(()=>{
+        if (localUpdated === "positive"){
+            localStorage.setItem('tutorialData', JSON.stringify(tutorialData));
+            let sortedTutData = sortingHelper(tutorialData);
+            setTutorials(sortedTutData);
+        }
+    },[localUpdated, tutorialData]);
     
-    let tutorial = tutorials.find(obj => {
-        return obj.title === title
-      })
+    let tutorial = tutorials.length === 0 ? {body: [{type: 'p', content: null }], related: [], title: null} :
+        tutorials.find(obj => {
+            return obj.title === title
+        })
 
     let body = tutorial.body
     let related = tutorial.related
