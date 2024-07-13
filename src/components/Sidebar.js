@@ -7,7 +7,7 @@ let Sidebar =props=>{
         <section className="sidebar">
             <img src={tortoise} className='sidebar__speed-indicator'  alt="PLACEHOLDER"></img>
             <section className='sidebar__checklist'>
-                <Stack onSelect={props.onSelect} onSelectAlg={props.onSelectAlg} />
+                <Stack onSelect={props.onSelect} onSelectAlg={props.onSelectAlg} complexities={props.complexities} />
             </section>
             <img src={rabbit} className='sidebar__speed-indicator'  alt="PLACEHOLDER"></img>
         </section>

@@ -10,7 +10,12 @@ let MainContentPanel = () =>{
     const [selections, setSelections] = useState([])
     const [latestSelection, setLatest] = useState(null)
     const [selectedAlg, setSelectedAlg] = useState(null)
-    const [complexities, setComplexities] = useState(null);
+    const [complexities, setComplexities] = useState([{
+        description: "",
+        examples: [{ images: null,name: null}],
+        rank: 0,
+        symbol: ""
+    }]);
 
     let getComplexity = symbol => complexities.find(obj => {return obj.symbol === symbol} )
 
@@ -44,7 +49,7 @@ let MainContentPanel = () =>{
 
     return (
         <section className='main-content-panel'>
-            <Sidebar onSelect={handleSelect} onSelectAlg={handleSelectAlg}/>
+            <Sidebar onSelect={handleSelect} onSelectAlg={handleSelectAlg} complexities={complexities}/>
             <section className='main-content-panel__main'>
                 <section className='main-content-panel__graph-wrapper'>
                     <Graph selections={selections} />

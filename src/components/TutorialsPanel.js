@@ -19,6 +19,7 @@ const TutorialHubContentPanel =()=>{
             setLocalUpdated("positive");       
         } else {
             setTutorialData(JSON.parse(localStorage.getItem("tutorialData")))
+            setLocalUpdated("false");
         }
     },[]);
 

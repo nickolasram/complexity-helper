@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-import data from '../source.json'
+import React, {useState, useEffect} from 'react';
 import Header from '../components/Header';
 import FormattedExercise from "../components/FormattedExercise";
 import FormattedCode from '../components/FormattedCode';
@@ -7,18 +6,58 @@ import ExercisesSidebar from "../components/ExercisesSidebar";
 import CtCFeedback from '../components/CtCFeedback';
 import MPOptions from "../components/MPOptions";
 import SAInput from '../components/SAInput';
+import getData from '../components/functions/getData'
 
 let Exercises =()=> {
-    const [exercises, setExercises] = useState(data.exercises)
+    const [exerciseData, setExerciseData] = useState(null);
+    const [localUpdated, setLocalUpdated] = useState(null);
+    const [exercises, setExercises] = useState([{
+        "type": null,
+        "level": null,
+        "category": null,
+        "question": null,
+        "answers":["null"],
+        "status": null,
+        "prompt": null
+    }])
     const [questionIndex, setQuestionIndex] = useState(0);
     // const [result, setResult] = useState(null);
     const [revealState, setRevealState] = useState(false);
-    const [answers, setAnswers] = useState(Array(exercises[questionIndex].answers.length).fill(null));
+    const [answers, setAnswers] = useState(Array(exercises[questionIndex].answers?.length).fill(null));
     const [givenShortAnswer, setGivenShortAnswer] = useState(null);
+    const [filteringOptions, setFilteringOptions] = useState(
+        {
+            "category": [null],
+            "difficulty": [null],
+            "type": [null]
+      })
+
+    useEffect(()=>{
+        if (!localStorage.getItem("exerciseData")){
+            console.log("runnin")
+            getData('exercise', setExerciseData);
+            setLocalUpdated("positive");       
+        } else {
+            setExerciseData(JSON.parse(localStorage.getItem("exerciseData")));
+            setLocalUpdated("false");
+        }
+    },[]);
+
+    useEffect(()=>{
+        if (localUpdated === "positive"){
+            localStorage.setItem('exerciseData', JSON.stringify(exerciseData));
+        }
+        if (exerciseData){
+            let justExercises = exerciseData.filter(exercise => exercise.category)
+            let retrievedFilteringOptions = exerciseData.find(exercise => exercise.filteringOptions)
+            setExercises(justExercises)
+            setFilteringOptions(retrievedFilteringOptions.filteringOptions)
+        }
+    },[localUpdated, exerciseData]);
 
     const filterExercises=(difficultySelection, categorySelection, typeSelection)=>{
-        let tempExercises = data.exercises;
-        let difSelectArray = []
+        let tempExercises = exerciseData.filter(exercise => exercise.category);
+        let difSelectArray = [];
         difficultySelection.forEach((item)=>{
             if (item.checked){
                 difSelectArray.push(item.value);
@@ -44,6 +83,17 @@ let Exercises =()=> {
         })
         if (typeSelectArray.length > 0){
             tempExercises = tempExercises.filter((item)=>typeSelectArray.includes(item.type))
+        }
+        if (tempExercises.length === 0){
+            tempExercises = [{
+                "type": null,
+                "level": null,
+                "category": null,
+                "question": null,
+                "answers":["null"],
+                "status": null,
+                "prompt": "No questions found. Try different filter options."
+            }]
         }
         setExercises(tempExercises);
 
@@ -109,7 +159,7 @@ let Exercises =()=> {
         <div id="wrapper">
             <Header />
             <div className='main-content-panel'>
-                <ExercisesSidebar confirmFilter={filterExercises} shuffleExercises={shuffle}/>
+                <ExercisesSidebar confirmFilter={filterExercises} shuffleExercises={shuffle} filteringOptions={filteringOptions}/>
                     <section className='main-content-panel__main main-content-panel__main--ex-grid'>
                     <div className="ex-info">
                         <section>

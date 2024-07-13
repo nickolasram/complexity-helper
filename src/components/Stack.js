@@ -1,11 +1,8 @@
 import Card from './Card';
-import data from '../source.json'
-
-let complexities = data.complexitiesO
-
-complexities.sort((a, b) => b.rank - a.rank);
 
 let Stack =props=> {
+    let complexities = props.complexities
+    complexities.sort((a, b) => b.rank - a.rank);
     return (
         <div className='stack'>
             {complexities.map((complexity, index)=>(

@@ -1,13 +1,11 @@
-import data from '../source.json';
 import ShuffleSVG from '../components/ShuffleSVG';
 // import ResetSVG from './ResetSVG';
 import PlaySVG from './PlaySVG';
 
-const difficulties = data.exerciseOptions.difficulty
-const types = data.exerciseOptions.type
-const categories = data.exerciseOptions.category
-
-const ExercisesSidebar =({confirmFilter, shuffleExercises})=>{
+const ExercisesSidebar =({confirmFilter, shuffleExercises, filteringOptions})=>{
+    const difficulties = filteringOptions.difficulty
+    const types = filteringOptions.type
+    const categories = filteringOptions.category
     return (
         <section className="sidebar sidebar--short">
             <section className='sidebar__checklist'>
